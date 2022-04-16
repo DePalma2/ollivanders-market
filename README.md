@@ -1,3 +1,0 @@
-
-
-![halloween](/preview.png)
