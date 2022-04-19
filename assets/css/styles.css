@@ -75,7 +75,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth!important;
 }
 
 body {
@@ -149,7 +149,7 @@ button {
 /*=============== HEADER ===============*/
 .header {
   width: 100%;
-  background: var(--body-color);
+  background: linear-gradient(to right bottom, #2e4f56, #23505d, #165165, #08516e, #005076, #00547a, #00587f, #005c83, #166584, #2a6e84);
   position: fixed;
   top: 0;
   left: 0;
@@ -240,7 +240,7 @@ button {
 
 /* Change background header */
 .scroll-header {
-  background: linear-gradient(to right bottom, #2e4f56, #23505d, #165165, #08516e, #005076, #00547a, #00587f, #005c83, #166584, #2a6e84, #3e7784, #507f85);
+  background: linear-gradient(to right bottom, #2e4f56, #23505d, #165165, #08516e, #005076, #00547a, #00587f, #005c83, #166584, #2a6e84);
 }
 
 /* Active link */
@@ -773,16 +773,6 @@ button {
   .about__container {
     grid-template-columns: .8fr;
     justify-content: center;
-  }
-
-  .newsletter__container {
-    display: grid;
-    grid-template-columns: .7fr;
-    justify-content: center;
-  }
-
-  .newsletter__description {
-    padding: 0 3rem;
   }
 }
 
