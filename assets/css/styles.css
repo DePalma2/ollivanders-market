@@ -113,7 +113,7 @@ button {
 
 .section__titulo {
   font-size: var(--h2-font-size);
-  margin-bottom: var(--mb-2);
+  margin-bottom: var(--mb-1);
   text-align: center;
 }
 
@@ -357,7 +357,7 @@ button {
   column-gap: .5rem;
 }
 
-/*=============== CATEGORIA ===============*/
+/*=============== CASAS ===============*/
 .casas__container {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem 2rem;
