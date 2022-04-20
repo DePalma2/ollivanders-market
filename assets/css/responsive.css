@@ -38,14 +38,14 @@
     height: 200px;
   }
 
-  .home__buttons {
+  .home__btns {
     flex-direction: column;
     width: max-content;
     row-gap: 1rem;
   }
 
-  .category__container,
-  .trick__container {
+  .casas__container,
+  .product__container {
     grid-template-columns: .8fr;
     justify-content: center;
   }
@@ -72,7 +72,6 @@
     height: calc(var(--header-height) + 1.5rem);
   }
 
-  .nav__img,
   .nav__close,
   .nav__toggle {
     display: none;
@@ -88,7 +87,7 @@
     font-weight: initial;
   }
 
-  .home__content {
+  .home__contenido {
     padding: 8rem 0 2rem;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
@@ -102,7 +101,7 @@
     margin-top: var(--mb-2);
   }
 
-  .category__container {
+  .casas__container {
     grid-template-columns: repeat(3, 200px);
     justify-content: center;
   }
@@ -112,7 +111,7 @@
     align-items: center;
   }
 
-  .about__title,
+  .about__titulo,
   .about__data {
     text-align: initial;
   }
@@ -121,13 +120,13 @@
     width: 250px;
   }
 
-  .trick__container {
+  .product__container {
     grid-template-columns: repeat(3, 200px);
     justify-content: center;
     gap: 2rem;
   }
 
-  .discount__container {
+  .descuento__container {
     grid-template-columns: repeat(2, max-content);
     justify-content: center;
     align-items: center;
@@ -136,17 +135,13 @@
     border-radius: 3rem;
   }
 
-  .discount__img {
+  .descuento__img {
     width: 350px;
     order: -1;
   }
 
-  .discount__data {
+  .descuento__data {
     padding-right: 6rem;
-  }
-
-  .newsletter__container {
-    grid-template-columns: .5fr;
   }
 
   .footer__container {
@@ -169,17 +164,17 @@
     margin-right: auto;
   }
 
-  .section__title {
+  .section__titulo {
     font-size: var(--h1-font-size);
     margin-bottom: 3rem;
   }
 
-  .home__content {
+  .home__contenido {
     padding-top: 9rem;
     gap: 3rem;
   }
 
-  .home__group {
+  .home__grupo {
     padding-top: 0;
   }
 
@@ -188,37 +183,37 @@
     transform: translateY(-3rem);
   }
 
-  .home__indicator {
+  .home__indicador {
     top: initial;
     right: initial;
     bottom: 15%;
     left: 45%;
   }
 
-  .home__indicator::after {
+  .home__indicador::after {
     top: 0;
     height: 75px;
   }
 
-  .home__details-img {
+  .home__detalles-img {
     bottom: 0;
     right: 58%;
   }
 
-  .home__title {
+  .home__titulo {
     margin-bottom: var(--mb-1-5);
   }
 
-  .home__description {
+  .home__descripcion {
     margin-bottom: var(--mb-2-5);
     padding-right: 2rem;
   }
 
-  .category__container {
-    column-gap: 8rem;
+  .casas__container {
+    column-gap: 5rem;
   }
 
-  .category__img {
+  .casas__img {
     width: 200px;
   }
 
@@ -230,46 +225,46 @@
     width: 350px;
   }
 
-  .about__description {
+  .about__descripcion {
     padding-right: 2rem;
   }
 
-  .trick__container {
+  .product__container {
     gap: 3.5rem;
   }
 
-  .trick__content {
+  .product__contenido {
     border-radius: 1.5rem;
   }
 
-  .trick__img {
+  .product__img {
     width: 110px;
   }
 
-  .trick__title {
+  .product__titulo {
     font-size: var(--h3-font-size);
   }
 
-  .discount__container {
+  .descuento__container {
     column-gap: 7rem;
   }
 
-  .new__content {
+  .nuevo__contenido {
     width: 310px;
     border-radius: 1rem;
     padding: 2rem 0;
   }
 
-  .new__img {
+  .nuevo__img {
     width: 150px;
   }
 
-  .new__img,
-  .new__subtitle {
+  .nuevo__img,
+  .nuevo__subtitulo {
     margin-bottom: var(--mb-1);
   }
 
-  .new__title {
+  .nuevo__titulo {
     font-size: var(--h3-font-size);
   }
 
@@ -285,10 +280,6 @@
 
   .swiper-pagination {
     margin-top: var(--mb-2-5);
-  }
-
-  .footer__img-one {
-    /* width: 100px; */
   }
 
   .footer__img-two {
