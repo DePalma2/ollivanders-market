@@ -226,7 +226,6 @@ button {
 
 /*=============== BOTON LANG ===============*/
 .langButton {
-  /* position: fixed; */
   width: 100%;
   height: 100%;
   display: inline-flex;
@@ -234,27 +233,22 @@ button {
 
 .switch_container_lang {
   margin: auto;
-  font-size: 1em;
-  height: 2em;
   line-height: 2em;
   border-radius: 0.3em;
   background: #ccc;
-  position: relative;
   display: block;
-  float: left;
 }
 
 .switch.esLang,
 .switch.brLang,
 .switch.usLang {
   cursor: pointer;
-  position: relative;
   display: block;
   float: left;
   -webkit-transition: 300ms ease-out;
   -moz-transition: 300ms ease-out;
   transition: 300ms ease-out;
-  padding: 0 1em;
+  padding: 0 1rem;
 }
 
 .switch.esLang.active {
