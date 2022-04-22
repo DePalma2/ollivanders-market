@@ -17,6 +17,11 @@
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
+    <!--=============== Jquery ===============-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -28,60 +33,42 @@
 
 <body>
     <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="index.html" class="nav__logo">
-                <img src="assets/img/logo.png" alt="Olivander's logo" class="nav__logo-img">
-                Olivander's Market
-            </a>
+    <header>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">Inicio</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">Acerca de nosotros</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#product" class="nav__link">Productos</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#new" class="nav__link">Carrito</a>
-                    </li>
-
-                    <a href="#" class="btn btn--ghost">Contacto</a>
-
-                    <div class="langButton">
-                        <div class="switch_container_lang">
-                            <div id="esLang" class="switch esLang active" onclick="cambiarEstado('esLang')">
-                                <span class="fi fi-es"></span>
-                            </div>
-                            <div id="brLang" class="switch brLang" onclick="cambiarEstado('brLang')">
-                                <span class="fi fi-br"></span>
-                            </div>
-                            <div id="usLang" class="switch usLang" onclick="cambiarEstado('usLang')">
-                                <span class="fi fi-us"></span>
-                            </div>
-                            <div id="selector" class="selector"></div>
-                        </div>
-                    </div>
-                </ul>
-
-                <div class="nav__close" id="nav-close">
-                    <i class='bx bx-x'></i>
-                </div>
-            </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-grid-alt'></i>
-            </div>
-
+        <nav>
+            <ul class="menu">
+                <img src="./assets/img/logo.png" alt="">
+                <li class="logo">
+                    <a href="#">Olivander's</a>
+                </li>
+                <li class="item"><a href="#">Inicio</a></li>
+                <li class="item"><a href="#">Acerca de Nosotros</a></li>
+                <li class="item"><a href="#">Productos</a></li>
+                <li class="item"><a href="#">Recien Llegado</a></li>
+                </li>
+                <li class="item button"><a href="#">Iniciar Sesion</a></li>
+                <li class="item button secondary"><a href="#">Registrarse</a></li>
+                <li class="toggle"><span class="bars"></span></li>
+            </ul>
         </nav>
     </header>
+<!-- 
+    <div class="langButton">
+        <div class="switch_container_lang">
+            <div id="esLang" class="switch esLang active" onclick="cambiarEstado('esLang')">
+                <span class="fi fi-es"></span>
+            </div>
+            <div id="brLang" class="switch brLang" onclick="cambiarEstado('brLang')">
+                <span class="fi fi-br"></span>
+            </div>
+            <div id="usLang" class="switch usLang" onclick="cambiarEstado('usLang')">
+                <span class="fi fi-us"></span>
+            </div>
+            <div id="selector" class="selector"></div>
+        </div>
+    </div> -->
+
+   
 
     <main class="main">
         <!--==================== HOME ====================-->
