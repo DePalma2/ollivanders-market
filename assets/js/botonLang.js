@@ -8,16 +8,16 @@ function cambiarEstado(period) {
         selector.style.left = 0;
         selector.style.width = esLang.clientWidth + "px";
         selector.style.backgroundColor = "#c99900";
-        //selector.innerHTML = "Mensuel";
+        selector.innerHTML = "esLang";
     } else if (period === "brLang") {
         selector.style.left = esLang.clientWidth + "px";
         selector.style.width = brLang.clientWidth + "px";
-        //selector.innerHTML = "Semestriel";
+        selector.innerHTML = "brLang";
         selector.style.backgroundColor = "#017c2f";
     } else {
         selector.style.left = esLang.clientWidth + brLang.clientWidth + 1 + "px";
         selector.style.width = usLang.clientWidth + "px";
-        //selector.innerHTML = "Annuel";
+        selector.innerHTML = "usLang";
         selector.style.backgroundColor = "#2a3a69";
     }
 }

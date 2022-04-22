@@ -241,6 +241,91 @@ nav {
   top: -5px;
 }
 
+/*=============== TRADUCCION MENU ===============*/
+
+.language-menu {
+  position: relative;
+  width: 120px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+.language-select {
+  display: flex;   
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.language-select:before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(https://www.countryflags.io/br/flat/32.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.language-select.change-br:before {
+  background-image: url(https://www.countryflags.io/br/flat/32.png);
+}
+.language-select.change-en:before {
+  background-image: url(https://www.countryflags.io/us/flat/32.png);
+}
+.language-select.change-es:before {
+  background-image: url(https://www.countryflags.io/es/flat/32.png);
+}
+
+.language-menu ul {
+  position: absolute;
+  width: 140px;
+  background-color: #fff;
+  border: 1px solid #f8f8f8;
+  padding-top: 10px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.language-menu ul li {
+  list-style: none;
+}
+
+.language-menu ul li a {
+  display: block;
+  color: #252525;
+  padding: 5px 10px;
+}
+
+.language-menu ul li:hover {
+  background-color: #f8f8f8;
+}
+
+.language-menu ul li a:before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+a.br:before {
+  background-image: url(https://www.countryflags.io/br/flat/32.png);
+}
+
+a.en:before {
+  background-image: url(https://www.countryflags.io/us/flat/32.png);
+}
+a.es:before {
+  background-image: url(https://www.countryflags.io/es/flat/32.png);
+}
+
+.language-menu:hover ul {
+  display: block;
+}
+
 /*=============== BOTON LANG ===============*/
 .langButton {
   width: 100%;
