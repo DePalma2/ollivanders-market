@@ -11,6 +11,9 @@
     <!--=============== BOXICONS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
+    <!--=============== FLAG ICON ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.2.0/css/flag-icons.min.css">
+
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
@@ -51,6 +54,21 @@
                     </li>
 
                     <a href="#" class="btn btn--ghost">Contacto</a>
+
+                    <div class="langButton">
+                        <div class="switch_container_lang">
+                            <div id="esLang" class="switch esLang active" onclick="cambiarEstado('esLang')">
+                                <span class="fi fi-es"></span>
+                            </div>
+                            <div id="brLang" class="switch brLang" onclick="cambiarEstado('brLang')">
+                                <span class="fi fi-br"></span>
+                            </div>
+                            <div id="usLang" class="switch usLang" onclick="cambiarEstado('usLang')">
+                                <span class="fi fi-us"></span>
+                            </div>
+                            <div id="selector" class="selector"></div>
+                        </div>
+                    </div>
                 </ul>
 
                 <div class="nav__close" id="nav-close">
@@ -147,7 +165,7 @@
                                 <p class="home__descripcion">"Juro solemnemente que mis intenciones no son buenas"
                                     <br>
                                     Medidas cerrado: 15 cm x 28,5 cm
-                                    
+
                                     Medidas abierto: 130 cm x 28,5 cm
                                 </p>
 
@@ -169,7 +187,9 @@
             <div class="about__container container grid">
                 <div class="about__data">
                     <h2 class="section__titulo about__titulo">Acerca de <b>Olivander's</b> <br>Market</h2>
-                    <p class="about__descripcion">Desde las peliculas hasta tu casa, te llevamos todo el merchandising de la saga Harry Potter, desde accesorios hasta indumentaria, todo con certificacion oficial de Warner Bross
+                    <p class="about__descripcion">Desde las peliculas hasta tu casa, te llevamos todo el merchandising
+                        de la saga Harry Potter, desde accesorios hasta indumentaria, todo con certificacion oficial de
+                        Warner Bross
                     </p>
                     <a href="#" class="btn">Adentrate en el Mundo Magico</a>
                 </div>
@@ -511,7 +531,8 @@
 
         <span class="footer__copy">&#169; Lucas De Palma y Lukas Otero. Todos los derechos reservados</span>
 
-        <img src="assets/img/footer_personajes/dum.png" alt="Dumbeldore" class="footer__img-one" width="180" height="243">
+        <img src="assets/img/footer_personajes/dum.png" alt="Dumbeldore" class="footer__img-one" width="180"
+            height="243">
         <img src="assets/img/footer_personajes/voldemort.png" alt="Voldemort" class="footer__img-two">
     </footer>
 
@@ -525,6 +546,9 @@
 
     <!--=============== SWIPER JS ===============-->
     <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== BOTON LANG JS ===============-->
+    <script src="assets/js/botonLang.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>

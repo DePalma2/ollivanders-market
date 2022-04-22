@@ -15,7 +15,7 @@
 
   /*Green gradient*/
   --body-color: linear-gradient(to right bottom, #2e4f56, #23505d, #165165, #08516e, #005076, #00547a, #00587f, #005c83, #166584, #2a6e84, #3e7784, #507f85);
-  --container-color:  rgba(255, 255, 255, 0.25);
+  --container-color: rgba(255, 255, 255, 0.25);
 
   /*ROJO DEGRADE*/
   /* --body-color: linear-gradient(90deg, hsl(360, 28%, 40%) 0%, hsl(18, 28%, 40%) 100%);
@@ -62,7 +62,7 @@
 }
 
 html {
-  scroll-behavior: smooth!important;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -222,6 +222,73 @@ button {
   height: 5px;
   background-color: var(--titulo-color);
   border-radius: 50%;
+}
+
+/*=============== BOTON LANG ===============*/
+.langButton {
+  /* position: fixed; */
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+}
+
+.switch_container_lang {
+  margin: auto;
+  font-size: 1em;
+  height: 2em;
+  line-height: 2em;
+  border-radius: 0.3em;
+  background: #ccc;
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.switch.esLang,
+.switch.brLang,
+.switch.usLang {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  float: left;
+  -webkit-transition: 300ms ease-out;
+  -moz-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+  padding: 0 1em;
+}
+
+.switch.esLang.active {
+  background-color: #c99900;
+  /* background-color: #8c0a0f; */
+}
+
+.switch.brLang.active {
+  background-color: #017c2f;
+  /* background-color: #cbb200; */
+  /* background-color: #011f5e; */
+}
+
+.switch.usLang.active {
+  background-color: #2a3a69;
+  /* background-color: #9e2c45; */
+  /* background-color: #f2f2f2; */
+}
+
+.selector {
+  text-align: center;
+  position: absolute;
+  width: 0;
+  box-sizing: border-box;
+  -webkit-transition: 300ms ease-out;
+  -moz-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+  border-radius: 0.3em;
+  color: white;
+  -moz-box-shadow: 0px 2px 13px 0px #9b9b9b;
+  -webkit-box-shadow: 0px 2px 13px 0px #9b9b9b;
+  -o-box-shadow: 0px 2px 13px 0px #9b9b9b;
+  box-shadow: 0px 2px 13px 0px #9b9b9b;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=180, Strength=13);
 }
 
 /*=============== HOME ===============*/
