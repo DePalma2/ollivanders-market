@@ -243,18 +243,20 @@ nav {
 
 /*=============== TRADUCCION MENU ===============*/
 
-.language-menu {
+/* .language-menu {
   position: relative;
   width: 120px;
   margin-left: 40px;
   font-weight: bold;
 }
+
 .language-select {
-  display: flex;   
+  display: flex;
   align-items: center;
   color: #fff;
   cursor: pointer;
 }
+
 .language-select:before {
   content: '';
   display: inline-block;
@@ -269,9 +271,11 @@ nav {
 .language-select.change-br:before {
   background-image: url(https://www.countryflags.io/br/flat/32.png);
 }
+
 .language-select.change-en:before {
   background-image: url(https://www.countryflags.io/us/flat/32.png);
 }
+
 .language-select.change-es:before {
   background-image: url(https://www.countryflags.io/es/flat/32.png);
 }
@@ -318,32 +322,35 @@ a.br:before {
 a.en:before {
   background-image: url(https://www.countryflags.io/us/flat/32.png);
 }
+
 a.es:before {
   background-image: url(https://www.countryflags.io/es/flat/32.png);
 }
 
 .language-menu:hover ul {
   display: block;
-}
+} */
 
 /*=============== BOTON LANG ===============*/
 .langButton {
-  width: 100%;
-  height: 100%;
   display: inline-flex;
+  margin: 0 5rem 0;
 }
 
 .switch_container_lang {
+  position: relative;
   margin: auto;
   line-height: 2em;
   border-radius: 0.3em;
   background: #ccc;
   display: block;
+  float: left;
 }
 
 .switch.esLang,
 .switch.brLang,
 .switch.usLang {
+  position: relative;
   cursor: pointer;
   display: block;
   float: left;
@@ -351,23 +358,6 @@ a.es:before {
   -moz-transition: 300ms ease-out;
   transition: 300ms ease-out;
   padding: 0 1rem;
-}
-
-.switch.esLang.active {
-  background-color: #c99900;
-  /* background-color: #8c0a0f; */
-}
-
-.switch.brLang.active {
-  background-color: #017c2f;
-  /* background-color: #cbb200; */
-  /* background-color: #011f5e; */
-}
-
-.switch.usLang.active {
-  background-color: #2a3a69;
-  /* background-color: #9e2c45; */
-  /* background-color: #f2f2f2; */
 }
 
 .selector {
