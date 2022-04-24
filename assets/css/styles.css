@@ -149,7 +149,7 @@ nav {
 
 /*=============== NAV ================*/
 .menu a {
-  color: #Fff;
+  color: #ffffff;
 }
 
 .logo a:hover {
@@ -177,7 +177,11 @@ nav {
   border-bottom: 1px #444 solid;
 }
 
-/* Mobile menu */
+.item a {
+  padding: 0 10px;
+}
+
+/* MOBILE MENU */
 .menu {
   display: flex;
   flex-wrap: wrap;
