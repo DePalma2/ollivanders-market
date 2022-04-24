@@ -10,6 +10,18 @@ $(function () {
 });
 
 
+/*=============== HOME Slider ===============*/
+let homeSwiper = new Swiper(".home-swiper", {
+    spaceBetween: 30,
+    loop: 'true',
+    
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+})
+
+
 /*=============== Slider Nuevos Productos ===============*/
 let newSwiper = new Swiper(".new-swiper", {
     centeredSlides: true,
