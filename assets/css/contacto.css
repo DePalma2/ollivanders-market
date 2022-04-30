@@ -1,0 +1,255 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*=============== CLASES GLOBALES ===============*/
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+[role=button],
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+.wrap-input {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.2;
+}
+
+.focus-input {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/*=============== TEXTO FLOTANTE ===============*/
+input.input:focus+.focus-input::after,
+input.input:not(:placeholder-shown)+.focus-input::after {
+    transform: translateY(-1.2rem) scale(.9);
+    transform-origin: left top;
+    color: #3866f2;
+}
+
+textarea.input:focus+.focus-input::after,
+textarea.input:not(:placeholder-shown)+.focus-input::after {
+    transform: translateY(-1.2rem) scale(.9);
+    transform-origin: left top;
+    color: #3866f2;
+}
+
+/*=============== LINEA CON ANIMACION ===============*/
+input.input:focus~.focus-input::before,
+input.input:not(:placeholder-shown)~.focus-input::before {
+    transform: scale(1);
+}
+
+.focus-input::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    background: rgba(219,21,99,1);
+    background: -webkit-linear-gradient(45deg, #d5007d, #e53935);
+    background: -o-linear-gradient(45deg, #d5007d, #e53935);
+    background: -moz-linear-gradient(45deg, #d5007d, #e53935);
+    background: linear-gradient(45deg, #d5007d, #e53935);
+    transform: scale(0);
+}
+
+
+.focus-input::after {
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #999999;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+/*=============== VALIDACION ===============*/
+.validate-input {
+    position: relative;
+}
+
+.error {
+    color: red;
+}
+
+/*=============== FORM ===============*/
+.bg-contact {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.container-contact {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(to right bottom, #2e4f56ce, #23505dce, #165165ce, #08516ece, #005076ce, #00547ace, #00587fce, #005c83ce, #166584ce, #2a6e84ce);
+}
+
+.wrap-contact {
+    width: 790px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 50px 60px;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form-title {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 60px;
+    font-weight: 700;
+}
+
+/*=============== TEXTAREA ===============*/
+textarea {
+    outline: none;
+    border: none;
+    overflow: auto;
+    resize: vertical;
+}
+
+textarea.input {
+    min-height: 6rem;
+    max-height: 15rem;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+/*=============== BOTON ===============*/
+.container-contact-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 13px;
+}
+
+.wrap-contact-form-btn {
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    width: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.contact-form-bgbtn {
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 100%;
+    background: rgba(219, 21, 99, 1);
+    background: -webkit-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+    background: -o-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+    background: -moz-linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+    background: linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935);
+    top: 0;
+    left: -100%;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.contact-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 244px;
+    height: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+}

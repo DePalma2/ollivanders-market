@@ -1,10 +1,10 @@
 # Olivander's Market - master branch
 
 ### Maquetado:
-- [ ] Loggin -> Lucas
-- [ ] Register -> Lucas
+- [X] Loggin -> Lucas
+- [X] Register -> Lucas
 - [ ] Formulario para contacto -> Lks
-- [ ] Botón para cambiar el idioma -> Lks
+- [X] Botón para cambiar el idioma -> Lks
 
 ### Funcionalidades:
 - [X] Responsive
