@@ -19,3 +19,4 @@ El proyecto tiene como objetivo realizar un carrito de compras con la temática 
 - [ ] Dashboard administrativo.
 - [ ] Backend para el envío del email (localhost).
 - [ ] Página en varios idiomas (Español dafault, inglés, portugues).
+- [ ] Base de datos.

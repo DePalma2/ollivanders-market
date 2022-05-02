@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="../../assets/img/logo.png " type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/logo.png " type="image/x-icon">
 
     <!--=============== BOXICONS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -15,9 +15,7 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
     <!--=============== CSS ===============-->
-    <!-- <link rel="stylesheet" href="../../assets/css/responsive.css">
-    <link rel="stylesheet" href="../../assets/css/styles.css"> -->
-    <link rel="stylesheet" href="../../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
 
     <title>Olivander's Market</title>
 </head>
@@ -29,6 +27,7 @@
                 <div class="form login">
                     <span class="title">Iniciar Sesion</span>
 
+                    <!-- LOGIN FORM -->
                     <form action="#">
                         <div class="input-field">
                             <input type="text" placeholder="Ingresa tu email" required>
@@ -62,7 +61,7 @@
                     </div>
                 </div>
 
-                <!-- Registration Form -->
+                <!-- REGISTRO FORM -->
                 <div class="form signup">
                     <span class="title">Registro</span>
 
@@ -100,15 +99,16 @@
                         </span>
                         <br>
                         <span class="text">Para volver a la pagina principal haga 
-                            <a href="../../index.html" class="text signup-link">click aqui</a>
+                            <a href="../index.html" class="text signup-link">click aqui</a>
                         </span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <!--=============== MAIN JS ===============-->
-    <script src="../../assets/js/login.js"></script>
+    <script src="../assets/js/login.js"></script>
 </body>
 
 </html>

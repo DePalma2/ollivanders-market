@@ -76,7 +76,7 @@
                 <li class="item"><a href="../index.html#product">Productos</a></li>
                 <li class="item"><a href="../index.html#new">Recien Llegado</a></li>
                 <li class="item"><a href="../pages/contacto.php">Contacto</a></li>
-                <li class="item button"><a href="./login/login.html">Iniciar Sesion</a></li>
+                <li class="item button"><a href="login.php">Iniciar Sesion</a></li>
                 <li class="toggle"><span class="bars"></span></li>
 
 
@@ -100,40 +100,41 @@
 
     <main class="main">
         <!--==================== CONTACTO ====================-->
-        <div class="bg-contact" style="background-image: url('../assets/img/contacto/background.jpg');">
-            <div class="container-contact">
-                <div class="wrap-contact">
-                    <form class="contact-form validate-form" action="contacto.php" method="POST">
-                        <span class="contact-form-title">
-                            Ponerse en Contacto
-                        </span>
-                        
-                        <ul>
-                        <?php foreach ($errores as $error) : ?>
-                            <li class="error"><?php echo $error ?></li>
-                        <?php endforeach ?>
-                        </ul>
+        <div class="container-contact">
+            <div class="wrap-contact">
+                <form class="contact-form validate-form" action="contacto.php" method="POST">
+                    <span class="contact-form-title">
+                        Ponerse en Contacto
+                    </span>
 
-                        <div class="wrap-input validate-input">
-                            <input class="input" type="text" name="name" placeholder=" " autocomplete="off" value="<?php echo $name ?>" required>
-                            <span class="focus-input" data-placeholder="Nombre"></span>
+                    <ul>
+                        <?php foreach ($errores as $error) : ?>
+                        <li class="error"><?php echo $error ?></li>
+                        <?php endforeach ?>
+                    </ul>
+
+                    <div class="wrap-input validate-input">
+                        <input class="input" type="text" name="name" placeholder=" " autocomplete="off"
+                            value="<?php echo $name ?>" required>
+                        <span class="focus-input" data-placeholder="Nombre"></span>
+                    </div>
+                    <div class="wrap-input validate-input">
+                        <input class="input" type="email" name="email" placeholder=" " autocomplete="off"
+                            value="<?php echo $email ?>" required>
+                        <span class="focus-input" data-placeholder="Email"></span>
+                    </div>
+                    <div class="wrap-input validate-input">
+                        <textarea class="input" name="msg" placeholder=" " autocomplete="off" value="<?php echo $msg ?>"
+                            required></textarea>
+                        <span class="focus-input" data-placeholder="Mensaje"></span>
+                    </div>
+                    <div class="container-contact-form-btn">
+                        <div class="wrap-contact-form-btn">
+                            <div class="contact-form-bgbtn"></div>
+                            <button type="submit" class="contact-form-btn">Envíar</button>
                         </div>
-                        <div class="wrap-input validate-input">
-                            <input class="input" type="email" name="email" placeholder=" " autocomplete="off" value="<?php echo $email ?>" required>
-                            <span class="focus-input" data-placeholder="Email"></span>
-                        </div>
-                        <div class="wrap-input validate-input">
-                            <textarea class="input" name="msg" placeholder=" " autocomplete="off" value="<?php echo $msg ?>" required></textarea>
-                            <span class="focus-input" data-placeholder="Mensaje"></span>
-                        </div>
-                        <div class="container-contact-form-btn">
-                            <div class="wrap-contact-form-btn">
-                                <div class="contact-form-bgbtn"></div>
-                                <button type="submit" class="contact-form-btn">Envíar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </main>
@@ -209,9 +210,7 @@
     </footer>
 
     <!--=============== SCROLL UP ===============-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class='bx bx-up-arrow-alt scrollup__icon'></i>
-    </a>
+    <a href="#" class="scrollup" id="scroll-up"><i class='bx bx-up-arrow-alt scrollup__icon'></i></a>
 
     <!--=============== SCROLL REVEAL ===============-->
     <script src="../assets/js/scrollreveal.min.js"></script>

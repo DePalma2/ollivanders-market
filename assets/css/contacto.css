@@ -137,13 +137,6 @@ input.input:not(:placeholder-shown)~.focus-input::before {
 }
 
 /*=============== FORM ===============*/
-.bg-contact {
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
 .container-contact {
     width: 100%;
     min-height: 100vh;
