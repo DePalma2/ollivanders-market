@@ -1,11 +1,15 @@
-const btnSignIn= document.querySelector('.sign-in-btn'),
-      btnSignUp = document.querySelector('.sign-up-btn'),  
-      signUp = document.querySelector('.sign-up'),
-      signIn  = document.querySelector('.sign-in');
+const container = document.querySelector(".container"),
+      pwShowHide = document.querySelectorAll(".showHidePw"),
+      pwFields = document.querySelectorAll(".password"),
+      signUp = document.querySelector(".signup-link"),
+      login = document.querySelector(".login-link");
 
-document.addEventListener('click', e => {
-    if (e.target === btnSignIn || e.target === btnSignUp) {
-        signIn.classList.toggle('active');
-        signUp.classList.toggle('active')
-    }
-});
+    
+    signUp.addEventListener("click", ( )=>{
+        container.classList.add("active");
+    });
+    login.addEventListener("click", ( )=>{
+        container.classList.remove("active");
+    });
+
+                            
