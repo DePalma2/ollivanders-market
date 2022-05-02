@@ -75,7 +75,8 @@
                 <li class="item"><a href="../index.html#aboutUs">Acerca de Nosotros</a></li>
                 <li class="item"><a href="../index.html#product">Productos</a></li>
                 <li class="item"><a href="../index.html#new">Recien Llegado</a></li>
-                <li class="item button"><a href="login/login.html">Iniciar Sesion</a></li>
+                <li class="item"><a href="../pages/contacto.php">Contacto</a></li>
+                <li class="item button"><a href="./login/login.html">Iniciar Sesion</a></li>
                 <li class="toggle"><span class="bars"></span></li>
 
 
