@@ -12,8 +12,7 @@ $name = test_input($_POST['name'] ?? null);
 $email = test_input($_POST['email'] ?? null);
 $msg = test_input($_POST['msg'] ?? null);
 
-//GUARDADO DEL MSG POR SI HAY ALGUN ERROR O REFRESCA LA PAGINA
-$msg = $_POST['msg'];
+
 
 $errores = array();
 
