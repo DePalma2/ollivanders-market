@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
     <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="../assets/css/login.css">
@@ -56,7 +56,7 @@
                         </span>
                         <br>
                         <span class="text">Para volver a la pagina principal haga 
-                            <a href="../../index.html" class="text signup-link">click aqui</a>
+                            <a href="../index.html" class="text signup-link">click aqui</a>
                         </span>
                     </div>
                 </div>
