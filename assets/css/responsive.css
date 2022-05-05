@@ -50,6 +50,8 @@
 }
 
 @media all and (min-width: 768px) {
+
+
   .item {
     display: block;
     width: auto;
@@ -112,6 +114,11 @@
 /*===============  BREAKPOINTS ===============*/
 /* PARA DISPOSITIVOS SMALL */
 @media screen and (max-width: 320px) {
+
+  .main { 
+    margin-top: 30px;
+  }
+
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -376,6 +383,8 @@
 /*=============== CONTACTO ===============*/
 /* PARA DISPOSITIVOS SMALL EN ADELANTE */
 @media screen and (min-width: 320px) {
+
+
   .contact-form-btn {
     min-width: 7.5rem;
   }

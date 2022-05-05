@@ -8,6 +8,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+/* ===== ESTILOS CONTENEDORES GENERALES ===== */
+
 .container-form-lg-rg {
     height: 100vh;
     display: flex;
@@ -15,6 +18,7 @@
     justify-content: center;
     background: linear-gradient(to right bottom, #2e4f56, #23505d, #165165, #08516e, #005076, #00547a, #00587f, #005c83, #166584, #2a6e84);
 }
+
 
 .container {
     position: relative;
@@ -27,10 +31,12 @@
     margin: 0 20px;
 }
 
+/* ===== ESTILOS CONTENEDOR FORM ===== */
+
 .container .forms {
     display: flex;
     align-items: center;
-    height: 440px;
+    height: 500px;
     width: 200%;
     transition: height 0.2s ease;
 }
@@ -60,7 +66,7 @@
 }
 
 .container.active .forms {
-    height: 600px;
+    height: 620px;
 }
 
 .container .form .title {
@@ -68,6 +74,10 @@
     font-size: 27px;
     font-weight: 600;
 }
+
+
+
+/* ===== ESTILOS FORMULARIO ===== */
 
 .form .title::before {
     content: '';
@@ -87,11 +97,13 @@
     margin-top: 30px;
 }
 
+/* ===== ESTILOS PARA LOS CAMPOS DEL FORMULARIO ===== */
+
 .input-field input {
     position: absolute;
     height: 100%;
     width: 100%;
-    padding: 0 35px;
+    text-align: center;
     border: none;
     outline: none;
     font-size: 16px;
@@ -127,11 +139,20 @@
     padding: 10px;
 }
 
+
+/* ===== ESTILOS CHECKBOX ===== */
+
 .form .checkbox-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+@media (max-width: 320px) {
+    .form .checkbox-text {
+        display: block;
+    }
 }
 
 .checkbox-text .checkbox-content {
@@ -158,6 +179,8 @@
     text-decoration: underline;
 }
 
+/* ===== ESTILOS BOTONES FORMULARIO ===== */
+
 .form .button {
     margin-top: 35px;
 }
@@ -182,3 +205,4 @@
     margin-top: 30px;
     text-align: center;
 }
+

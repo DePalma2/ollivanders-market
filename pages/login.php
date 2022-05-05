@@ -41,10 +41,8 @@
                                 <input type="checkbox" id="logCheck">
                                 <label for="logCheck" class="text">Recordarme</label>
                             </div>
-
                             <a href="#" class="text">Olvidaste tu contraseña?</a>
                         </div>
-
                         <div class="input-field button">
                             <input type="button" value="Ingresar">
                         </div>
