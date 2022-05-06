@@ -1,7 +1,14 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/*=============== CLASES GLOBALES ===============*/
+/*=============== VARIABLES ===============*/
+:root {
+    --text-black-black: #000000;
+    --text-white: #ffffff;
+    --main: #4070f4;
+}
+
+/*=============== RESETS ===============*/
 * {
     margin: 0;
     padding: 0;
@@ -15,142 +22,28 @@ button {
     background: transparent;
 }
 
-input {
-    outline: none;
-    border: none;
-}
-
-button,
-input {
-    overflow: visible;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-[role=button],
-a,
-area,
-button,
-input,
-label,
-select,
-summary,
-textarea {
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-}
-
-.wrap-input {
-    width: 100%;
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin-bottom: 37px;
-}
-
-.input {
-    display: block;
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: #555555;
-    line-height: 1.2;
-}
-
-.focus-input {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-}
-
-.container-form {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.bg-form {
     background: linear-gradient(to right bottom, #2e4f56, #23505d, #165165, #08516e, #005076, #00547a, #00587f, #005c83, #166584, #2a6e84);
 }
 
-/*=============== TEXTO FLOTANTE ===============*/
-input.input:focus+.focus-input::after,
-input.input:not(:placeholder-shown)+.focus-input::after {
-    transform: translateY(-1.2rem) scale(.9);
-    transform-origin: left top;
-    color: #4070f4;
-}
-
-textarea.input:focus+.focus-input::after,
-textarea.input:not(:placeholder-shown)+.focus-input::after {
-    transform: translateY(-1.2rem) scale(.9);
-    transform-origin: left top;
-    color: #4070f4;
-}
-
-/*=============== LINEA CON ANIMACION ===============*/
-input.input:focus~.focus-input::before,
-input.input:not(:placeholder-shown)~.focus-input::before,
-textarea.input:focus~.focus-input::before,
-textarea.input:not(:placeholder-shown)~.focus-input::before {
-    transform: scale(1);
-}
-
-.focus-input::before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-    background: #4070f4;
-    transform: scale(0);
-}
-
-
-.focus-input::after {
-    content: attr(data-placeholder);
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    color: #999999;
-    line-height: 1.2;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-}
-
 /*=============== ERRORES ===============*/
+.flex {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
 .error {
-    margin: 8px 16px;
+    text-align: start;
+    margin: 8px 8px 8px 30px;
     color: red;
-    transition: all 0.4s ease;
+    width: 100%;
 }
 
 /*=============== FORM ===============*/
-.container-contact {
+.container-form {
     width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -159,47 +52,78 @@ textarea.input:not(:placeholder-shown)~.focus-input::before {
     background: linear-gradient(to right bottom, #2e4f56ce, #23505dce, #165165ce, #08516ece, #005076ce, #00547ace, #00587fce, #005c83ce, #166584ce, #2a6e84ce);
 }
 
-.container-wraps {
-    padding-top: 1.5rem;
-}
-
-.wrap-contact {
-    width: 790px;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 30px 60px;
-}
-
 .contact-form {
     width: 100%;
+    background: var(--text-white);
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 .contact-form-title {
-    position: relative;
     display: block;
-    font-family: 'Poppins', sans-serif;
     font-size: 40px;
-    color: #333333;
+    color: var(--text-black);
     line-height: 1.2;
     text-align: center;
-    margin-bottom: 1rem;
     font-weight: 600;
+}
+
+/*=============== INPUTS ===============*/
+.container-inputs {
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input {
+    border: solid 1.5px #4d4d4d;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.user-label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: var(--text-black);
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: all 0.3s ease;
+}
+
+.input:focus,
+input:valid,
+textarea:focus,
+textarea:valid {
+    outline: none;
+    border: 1.5px solid var(--main);
+}
+
+.input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    transform: translateY(-50%) scale(0.8);
+    background: var(--text-white);
+    padding: 0 .2em;
+    color: var(--main);
 }
 
 /*=============== TEXTAREA ===============*/
 textarea {
-    outline: none;
-    border: none;
-    overflow: auto;
-    resize: vertical;
-}
-
-textarea.input {
-    min-height: 6rem;
-    max-height: 12rem;
-    min-width: 100%;
-    max-width: 100%;
+    width: 198px;
+    height: 256px;
+    resize: none;
 }
 
 /*=============== BOTON ===============*/

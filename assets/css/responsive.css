@@ -115,7 +115,7 @@
 /* PARA DISPOSITIVOS SMALL */
 @media screen and (max-width: 320px) {
 
-  .main { 
+  .main {
     margin-top: 30px;
   }
 
@@ -381,32 +381,41 @@
 }
 
 /*=============== CONTACTO ===============*/
-/* PARA DISPOSITIVOS SMALL EN ADELANTE */
-@media screen and (min-width: 320px) {
-
-
-  .contact-form-btn {
-    min-width: 7.5rem;
-  }
-
-  .contact-form-title {
-    font-size: 2rem;
-  }
-
-  .wrap-input {
-    margin-bottom: 2rem;
-  }
-}
-
+/* PARA DISPOSITIVOS SMALL L EN ADELANTE */
 @media screen and (min-width: 375px) {
-  .contact-form-btn {
-    min-width: 12.5rem;
+  .input,
+  textarea {
+    width: 300px;
+  }
+
+  textarea {
+    height: 200px;
   }
 }
 
 /* PARA DISPOSITIVOS MEDIUM EN ADELANTE */
 @media screen and (min-width: 576px) {
-  .contact-form-title {
-    font-size: 2.5rem;
+  .contact-form {
+    width: 500px;
+  }
+  
+  .input,
+  textarea {
+    width: 400px;
+  }
+
+  textarea {
+    height: 150px;
+  }
+}
+
+/* PARA DISPOSITIVOS LARGE EN ADELANTE */
+@media screen and (min-width: 1024px) {
+  .container-form {
+    height: 100vh;
+  }
+
+  textarea {
+    height: 100px;
   }
 }
