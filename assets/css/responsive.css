@@ -51,6 +51,10 @@
     display: contents;
   }
 
+  .container-btn-hamburguesa li {
+    margin: 0.5rem 0;
+  }
+
   .container-btn-hamburguesa li:first-child {
     margin-top: 1rem;
   }
@@ -66,9 +70,13 @@
     margin: 0;
   }
 
+  .container-btn-hamburguesa li {
+    inline-size: min-content;
+  }
+
   .container-btn-hamburguesa li,
   .container-btn-hamburguesa li:first-child {
-    margin: 0;
+    margin: 0 1rem;
   }
 }
 
