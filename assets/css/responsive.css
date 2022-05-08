@@ -78,6 +78,10 @@
   .container-btn-hamburguesa li:first-child {
     margin: 0 1rem;
   }
+
+  button.btn-primary {
+    padding: 10px;
+  }
 }
 
 /*===============  BREAKPOINTS ===============*/
