@@ -98,8 +98,9 @@ button {
 }
 
 nav {
+  flex-direction: column;
   background: linear-gradient(to right bottom, #2e4f56, #23505d, #165165, #08516e, #005076, #00547a, #00587f, #005c83, #166584, #2a6e84);
-  padding: 5px 20px;
+  padding: 1rem 0;
 }
 
 /*=============== CLASES REUSABLES ===============*/
@@ -111,6 +112,14 @@ nav {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-1);
   text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 /*=============== LAYOUT ===============*/
@@ -138,108 +147,32 @@ nav {
   z-index: var(--z-fixed);
 }
 
-/*=============== NAV ================*/
-.menu a {
-  color: #ffffff;
-}
-
-.logo a:hover {
-  text-decoration: none;
-}
-
-.menu li {
-  font-size: 16px;
-  padding: 15px 5px;
-  white-space: nowrap;
-}
-
-.menu img {
-  width: 20px;
-  height: 20px;
-
-}
-
-.logo a,
-.toggle a {
-  font-size: 20px;
-}
-
-.button.secondary {
-  border-bottom: 1px #444 solid;
-}
-
-.item a {
-  padding: 0 10px;
-}
-
-/* MOBILE MENU */
-.menu {
+/*=============== NAVBAR ================*/
+.container-logo {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
-.toggle {
-  order: 1;
+.logo {
+  margin-right: 0.5rem;
 }
 
-.item.button {
-  order: 2;
+.logo img {
+  width: 20px;
+  height: 20px;
 }
 
-.item {
-  width: 100%;
-  text-align: center;
-  order: 3;
-  display: none;
-}
-
-.item.active {
-  display: block;
-}
-
-.toggle {
-  cursor: pointer;
-}
-
-.bars {
-  background: #fff;
-  display: inline-block;
-  height: 2px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
-  text-align: center;
-  align-items: center;
-  display: flex;
-}
-
-.bars:before,
-.bars:after {
-  background: #fff;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-  text-align: center;
-  align-items: center;
-}
-
-.bars:before {
-  top: 5px;
-}
-
-.bars:after {
-  top: -5px;
+.text-logo a {
+  font-size: 22px;
+  color: #ffffff;
 }
 
 /*=============== BOTON LANG ===============*/
 .langButton {
-  display: inline-flex;
-  margin: 0 5rem 0;
+  margin: 1rem 0;
 }
 
 .switch_container_lang {
@@ -292,6 +225,82 @@ nav {
   -o-box-shadow: 0px 2px 13px 0px #9b9b9b;
   box-shadow: 0px 2px 13px 0px #9b9b9b;
   filter: progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=180, Strength=13);
+}
+
+
+/*=============== BOTON HAMBURGUESA ===============*/
+.btn-hamburguesa {
+  cursor: pointer;
+}
+
+.bars {
+  background: #ffffff;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+.bars:before,
+.bars:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.bars:before {
+  top: 5px;
+}
+
+.bars:after {
+  top: -5px;
+}
+
+/*=============== MOBILE MENU ===============*/
+.container-btn-hamburguesa {
+  margin-top: 1rem;
+}
+
+.container-btn-hamburguesa li {
+  margin: .5rem 0;
+}
+
+.container-btn-hamburguesa li a {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.item {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.item.active {
+  display: block;
+}
+
+/*=============== DISEÑO DE LOS BOTONES ===============*/
+.button a {
+  padding: 7.5px 15px;
+  background: teal;
+  border: 1px #006d6d solid;
+  border-radius: 16px;
+}
+
+.button a:hover {
+  text-decoration: none;
+  transition: all .25s;
 }
 
 /*=============== HOME ===============*/

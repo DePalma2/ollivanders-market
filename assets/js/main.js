@@ -1,6 +1,6 @@
-/*=============== NavBar ===============*/
+/*=============== NAVBAR ===============*/
 $(function () {
-    $(".toggle").on("click", function () {
+    $(".btn-hamburguesa").on("click", function () {
         if ($(".item").hasClass("active")) {
             $(".item").removeClass("active");
         } else {
@@ -10,7 +10,7 @@ $(function () {
 });
 
 
-/*=============== HOME Slider ===============*/
+/*=============== HOME SLIDER ===============*/
 let homeSwiper = new Swiper(".home-swiper", {
     spaceBetween: 30,
     loop: 'true',
@@ -22,7 +22,7 @@ let homeSwiper = new Swiper(".home-swiper", {
 })
 
 
-/*=============== Slider Nuevos Productos ===============*/
+/*=============== SLIDER NUEVOS PRODUCTOS ===============*/
 let newSwiper = new Swiper(".new-swiper", {
     centeredSlides: true,
     slidesPerView: "auto",
@@ -31,7 +31,7 @@ let newSwiper = new Swiper(".new-swiper", {
 });
 
 
-/*=============== Scroll para rriba ===============*/ 
+/*=============== SCROLL PARA ARRIBA ===============*/ 
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
     // When the scroll is higher than 460 viewport height, add the show-scroll class to the a tag with the scroll-top class

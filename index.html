@@ -33,35 +33,35 @@
 <body>
     <!--==================== HEADER ====================-->
     <header>
-        <nav>
-            <ul class="menu">
-                <img src="assets/img/logo.png" alt="Logo">
-                <li class="logo">
-                    <a href="index.html">Olivander's</a>
-                </li>
+        <nav class="flex">
+            <ul class="container-logo">
+                <li class="logo flex"><img src="assets/img/logo.png" alt="Logo"></li>
+                <li class="text-logo"><a href="index.html">Olivander's</a></li>
+            </ul>
+
+            <div class="langButton">
+                <div class="switch_container_lang">
+                    <div id="esLang" class="switch esLang active" onclick="cambiarEstado('esLang')">
+                        <span class="fi fi-es"></span>
+                    </div>
+                    <div id="brLang" class="switch brLang" onclick="cambiarEstado('brLang')">
+                        <span class="fi fi-br"></span>
+                    </div>
+                    <div id="usLang" class="switch usLang" onclick="cambiarEstado('usLang')">
+                        <span class="fi fi-us"></span>
+                    </div>
+                    <div id="selector" class="selector"></div>
+                </div>
+            </div>
+
+            <div class="btn-hamburguesa"><span class="bars"></span></div>
+            <ul class="container-btn-hamburguesa">
                 <li class="item"><a href="#home">Inicio</a></li>
                 <li class="item"><a href="#aboutUs">Acerca de Nosotros</a></li>
                 <li class="item"><a href="#product">Productos</a></li>
                 <li class="item"><a href="#new">Recien Llegado</a></li>
                 <li class="item"><a href="pages/contacto.php">Contacto</a></li>
                 <li class="item button"><a href="pages/login.php">Iniciar Sesion</a></li>
-                <li class="toggle"><span class="bars"></span></li>
-
-
-                <div class="langButton">
-                    <div class="switch_container_lang">
-                        <div id="esLang" class="switch esLang active" onclick="cambiarEstado('esLang')">
-                            <span class="fi fi-es"></span>
-                        </div>
-                        <div id="brLang" class="switch brLang" onclick="cambiarEstado('brLang')">
-                            <span class="fi fi-br"></span>
-                        </div>
-                        <div id="usLang" class="switch usLang" onclick="cambiarEstado('usLang')">
-                            <span class="fi fi-us"></span>
-                        </div>
-                        <div id="selector" class="selector"></div>
-                    </div>
-                </div>
             </ul>
         </nav>
     </header>

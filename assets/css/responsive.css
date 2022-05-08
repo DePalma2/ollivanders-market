@@ -1,88 +1,3 @@
-/*=============== RESPONSIVE NAVBAR ===============*/
-@media all and (min-width: 468px) {
-
-  .menu {
-    justify-content: center;
-  }
-
-  .logo {
-    flex: 1;
-  }
-
-  .item.button {
-    width: auto;
-    order: 1;
-    display: block;
-  }
-
-  .toggle {
-    order: 2;
-  }
-
-  .button.secondary {
-    border: 0;
-  }
-
-  .button a {
-    padding: 7.5px 15px;
-    background: teal;
-    border: 1px #006d6d solid;
-    border-radius: 50em;
-  }
-
-  .button.secondary a {
-    background: transparent;
-  }
-
-  .button a:hover {
-    text-decoration: none;
-    transition: all .25s;
-  }
-
-  .button:not(.secondary) a:hover {
-    background: #006d6d;
-    border-color: #005959;
-  }
-
-  .button.secondary a:hover {
-    color: #ddd;
-  }
-}
-
-@media all and (min-width: 768px) {
-
-
-  .item {
-    display: block;
-    width: auto;
-  }
-
-  .toggle {
-    display: none;
-  }
-
-  .logo {
-    order: 0;
-  }
-
-  .item {
-    order: 1;
-  }
-
-  .button {
-    order: 2;
-  }
-
-  .menu li {
-    padding: 15px 10px;
-  }
-
-  .menu li.button {
-    padding-right: 0;
-  }
-}
-
-
 /*=============== RESPONSIVE TYPOGRAPHY ===============*/
 @media screen and (min-width: 992px) {
   :root {
@@ -96,18 +11,64 @@
   }
 }
 
-/*=============== NAV MENU ===============*/
-@media screen and (max-width: 767px) {
-  .nav__menu {
-    position: fixed;
-    width: 100%;
-    background: var(--container-color);
-    top: -150%;
-    left: 0;
-    padding: 3.5rem 0;
-    transition: .4s;
-    z-index: var(--z-fixed);
-    border-radius: 0 0 1.5rem 1.5rem;
+/*=============== MENU HAMBURGUESA ===============*/
+/* PARA 'TABLET M' EN ADELANTE */
+@media screen and (min-width: 625px) {
+  .item.button {
+    width: auto;
+    display: block;
+  }
+}
+
+/* PARA 'LAPTOP' EN ADELANTE */
+@media screen and (min-width: 1024px) {
+  .btn-hamburguesa {
+    display: none;
+  }
+
+  .item {
+    display: block;
+  }
+}
+
+
+/*=============== NAVBAR ===============*/
+/* PARA 'MOBILE L' EN ADELANTE */
+@media screen and (min-width: 425px) {
+  nav {
+    flex-direction: row;
+  }
+
+  .flex {
+    justify-content: space-around;
+  }
+
+  .langButton {
+    margin: 0;
+  }
+
+  .container-btn-hamburguesa {
+    display: contents;
+  }
+
+  .container-btn-hamburguesa li:first-child {
+    margin-top: 1rem;
+  }
+}
+
+/* PARA 'LAPTOP' EN ADELANTE */
+@media screen and (min-width: 1024px) {
+  .container-btn-hamburguesa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+  }
+
+  .container-btn-hamburguesa li,
+  .container-btn-hamburguesa li:first-child {
+    margin: 0;
   }
 }
 
@@ -381,8 +342,9 @@
 }
 
 /*=============== CONTACTO ===============*/
-/* PARA DISPOSITIVOS SMALL L EN ADELANTE */
+/* PARA 'MOBILE M' EN ADELANTE */
 @media screen and (min-width: 375px) {
+
   .input,
   textarea {
     width: 300px;
@@ -393,12 +355,12 @@
   }
 }
 
-/* PARA DISPOSITIVOS MEDIUM EN ADELANTE */
+/* PARA 'MOBILE L' EN ADELANTE */
 @media screen and (min-width: 576px) {
   .contact-form {
     width: 500px;
   }
-  
+
   .input,
   textarea {
     width: 400px;
@@ -409,7 +371,7 @@
   }
 }
 
-/* PARA DISPOSITIVOS LARGE EN ADELANTE */
+/* PARA 'LAPTOPS' EN ADELANTE */
 @media screen and (min-width: 1024px) {
   .container-form {
     height: 100vh;
