@@ -1,5 +1,5 @@
 /*=============== RESPONSIVE TYPOGRAPHY ===============*/
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   :root {
     --biggest-font-size: 4rem;
     --h1-font-size: 2.25rem;
@@ -13,7 +13,7 @@
 
 /*=============== MENU HAMBURGUESA ===============*/
 /* PARA 'TABLET M' EN ADELANTE */
-@media screen and (min-width: 625px) {
+@media (min-width: 625px) {
   .item.button {
     width: auto;
     display: block;
@@ -21,7 +21,7 @@
 }
 
 /* PARA 'LAPTOP' EN ADELANTE */
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .btn-hamburguesa {
     display: none;
   }
@@ -34,7 +34,7 @@
 
 /*=============== NAVBAR ===============*/
 /* PARA 'MOBILE L' EN ADELANTE */
-@media screen and (min-width: 425px) {
+@media (min-width: 425px) {
   nav {
     flex-direction: row;
   }
@@ -61,7 +61,7 @@
 }
 
 /* PARA 'LAPTOP' EN ADELANTE */
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .container-btn-hamburguesa {
     display: flex;
     justify-content: center;
@@ -82,7 +82,7 @@
 
 /*===============  BREAKPOINTS ===============*/
 /* PARA DISPOSITIVOS SMALL */
-@media screen and (max-width: 320px) {
+@media (max-width: 320px) {
 
   .main {
     margin-top: 30px;
@@ -108,17 +108,26 @@
     grid-template-columns: .8fr;
     justify-content: center;
   }
+
+  .footer__img-two {
+    width: 50%;
+    right:-5rem;
+  }
 }
 
 /* PARA DISPOSITIVOS MEDIUM */
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
   .about__container {
     grid-template-columns: .8fr;
     justify-content: center;
   }
+  .footer__img-two {
+    width: 10%;
+    right:5rem;
+  }
 }
 
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   body {
     margin: 0;
   }
@@ -209,15 +218,10 @@
     column-gap: 1rem;
   }
 
-  .footer__img-two {
-    right: initial;
-    bottom: 0;
-    left: 15%;
-  }
 }
 
 /* PARA DISPOSITIVOS LARGE */
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -333,7 +337,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .home__img {
     height: 420px;
   }
@@ -351,7 +355,7 @@
 
 /*=============== CONTACTO ===============*/
 /* PARA 'MOBILE M' EN ADELANTE */
-@media screen and (min-width: 375px) {
+@media (min-width: 375px) {
 
   .input,
   textarea {
@@ -361,10 +365,11 @@
   textarea {
     height: 200px;
   }
+
 }
 
 /* PARA 'MOBILE L' EN ADELANTE */
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) {
   .contact-form {
     width: 500px;
   }
@@ -380,7 +385,7 @@
 }
 
 /* PARA 'LAPTOPS' EN ADELANTE */
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .container-form {
     height: 100vh;
   }
