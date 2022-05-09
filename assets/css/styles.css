@@ -527,7 +527,7 @@ button.btn-primary:hover::before {
   transform: translateY(-.5rem);
 }
 
-/*=============== ABOUT ===============*/
+/*=============== ACERCA DE NOSOTROS ===============*/
 .about__container {
   row-gap: 2rem;
 }
