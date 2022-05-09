@@ -1,22 +1,17 @@
 # Olivander's Market
 
-## Objetivo:
-El proyecto tiene como objetivo realizar un carrito de compras con la temática de Harry Potter.
-
-### Integrantes del proyecto:
-- Lucas Mateo De Palma
-- Tomas Isaias Ruiz
-- Lukas Nicolás Otero
-
-### Maquetado que falta:
+## Maquetado que falta:
 - [ ] Dashboard administrativo.
 
-### Funcionalidades:
+## Funcionalidades:
+- [ ] Base de datos.
 - [ ] Loggin.
 - [ ] Register.
-- [ ] Roles (Usuario/Administrador/Otros).
-- [ ] Que el usuario pueda crear, editar, eliminar y ver publicaciones.
-- [ ] Dashboard administrativo.
+- [ ] Roles (Usuario/Administrador).
+- [ ] Que el administrador pueda crear, editar y eliminar publicaciones.
+- [ ] Que el administrador pueda ver, modificar, y eliminar usuarios y sus roles.
 - [ ] Backend para el envío del email (localhost).
 - [ ] Página en varios idiomas (Español dafault, inglés, portugues).
-- [ ] Base de datos.
+- [ ] Filtros para las publicaciones (ej: que aparezcan todas las publicaciones de Gryffindor).
+- [ ] Buscador de publicaciones (por palabras claves o algo así).
+- [ ] Método de pago (mercado pago).
