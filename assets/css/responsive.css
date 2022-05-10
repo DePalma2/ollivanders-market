@@ -11,27 +11,6 @@
   }
 }
 
-/*=============== MENU HAMBURGUESA ===============*/
-/* PARA 'TABLET M' EN ADELANTE */
-@media (min-width: 625px) {
-  .item.button {
-    width: auto;
-    display: block;
-  }
-}
-
-/* PARA 'LAPTOP' EN ADELANTE */
-@media (min-width: 1024px) {
-  .btn-hamburguesa {
-    display: none;
-  }
-
-  .item {
-    display: block;
-  }
-}
-
-
 /*=============== NAVBAR ===============*/
 /* PARA 'MOBILE L' EN ADELANTE */
 @media (min-width: 425px) {
@@ -46,41 +25,47 @@
   .langButton {
     margin: 0;
   }
+}
 
-  .container-btn-hamburguesa {
-    display: contents;
+/* PARA 'TABLET M' EN ADELANTE */
+@media (min-width: 625px) {
+  .d-none {
+    display: block;
   }
 
-  .container-btn-hamburguesa li {
-    margin: 0.5rem 0;
-  }
-
-  .container-btn-hamburguesa li:first-child {
-    margin-top: 1rem;
+  .d-block {
+    display: none;
   }
 }
 
-/* PARA 'LAPTOP' EN ADELANTE */
-@media (min-width: 1024px) {
+/* PARA 'LAPTOP M' EN ADELANTE */
+@media (min-width: 950px) {
   .container-btn-hamburguesa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    flex-direction: row;
     margin: 0;
+    width: auto;
   }
 
   .container-btn-hamburguesa li {
+    margin: 0 1rem;
     inline-size: min-content;
   }
 
-  .container-btn-hamburguesa li,
-  .container-btn-hamburguesa li:first-child {
-    margin: 0 1rem;
+  .btn-hamburguesa {
+    display: none;
   }
 
-  button.btn-primary {
-    padding: 10px;
+  .item {
+    display: block;
+  }
+
+  .d-none {
+    display: none;
+  }
+
+  .d-block {
+    display: block;
+    margin-left: 1rem;
   }
 }
 
@@ -115,7 +100,7 @@
 
   .footer__img-two {
     width: 50%;
-    right:-5rem;
+    right: -5rem;
   }
 }
 
@@ -125,9 +110,10 @@
     grid-template-columns: .8fr;
     justify-content: center;
   }
+
   .footer__img-two {
     width: 10%;
-    right:5rem;
+    right: 5rem;
   }
 }
 

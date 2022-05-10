@@ -122,6 +122,14 @@ nav {
   flex-wrap: wrap;
 }
 
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
 /*=============== LAYOUT ===============*/
 .container {
   max-width: 968px;
@@ -268,21 +276,24 @@ nav {
 
 /*=============== MOBILE MENU ===============*/
 .container-btn-hamburguesa {
-  margin-top: 1rem;
+  margin-top: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
 }
 
 .container-btn-hamburguesa li {
-  margin: 1rem 0;
+  margin: .5rem 0;
+  width: auto;
 }
 
 .container-btn-hamburguesa li a {
   font-size: 15px;
   color: #ffffff;
   font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
 }
 
 .item {
