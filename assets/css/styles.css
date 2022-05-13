@@ -10,9 +10,8 @@
   --first-color-alt: hsl(var(--hue), 91%, 50%);
   --titulo-color: hsl(var(--hue), 4%, 100%);
   --text-color: hsl(var(--hue), 4%, 85%);
-  --text-color-light: hsl(var(--hue), 4%, 55%);
 
-  /*Green gradient*/
+  /*VERDE GRADIANTE*/
   --body-color: linear-gradient(to right bottom, #2e4f56, #23505d, #165165, #08516e, #005076, #00547a, #00587f, #005c83, #166584, #2a6e84, #3e7784, #507f85);
   --container-color: rgba(255, 255, 255, 0.25);
 
@@ -20,12 +19,12 @@
   /*========== FUENTES Y TIPOGRAFIAS ==========*/
   --body-font: 'Poppins', sans-serif;
   --biggest-font-size: 2rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --h1-font-size: 1.8rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .8rem;
+  --smaller-font-size: .7rem;
 
   /*========== GROSOR DE FUENTE ==========*/
   --font-medium: 500;
@@ -33,9 +32,7 @@
   --font-black: 900;
 
   /*========== MARGENES BOTTOM ==========*/
-  --mb-0-25: .25rem;
   --mb-0-5: .5rem;
-  --mb-0-75: .75rem;
   --mb-1: 1rem;
   --mb-1-5: 1.5rem;
   --mb-2: 2rem;
@@ -83,6 +80,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 button,
@@ -105,13 +103,14 @@ nav {
 
 /*=============== CLASES REUSABLES ===============*/
 .section {
-  padding: 4.5rem 0 2rem;
+  padding: 4rem 0;
 }
 
 .section__titulo {
-  font-size: var(--h2-font-size);
+  font-size: var(--h1-font-size);
   margin-bottom: var(--mb-1);
   text-align: center;
+  width: 100%;
 }
 
 .flex {
@@ -120,6 +119,14 @@ nav {
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .d-none {
@@ -135,10 +142,6 @@ nav {
   max-width: 968px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
-}
-
-.grid {
-  display: grid;
 }
 
 .main {
@@ -345,7 +348,7 @@ button.btn-primary:hover::before {
   width: 100%;
 }
 
-/*=============== BOTON SECUNDARIO ===============*/
+/*=============== BOTONES SECUNDARIOS ===============*/
 .btn-secondary {
   cursor: pointer;
   position: relative;
@@ -382,29 +385,44 @@ button.btn-primary:hover::before {
 }
 
 /*=============== HOME ===============*/
-.home__contenido {
-  row-gap: 1rem;
+.home {
+  margin: 1rem;
 }
 
 .home__grupo {
-  display: grid;
+  display: flex;
+  justify-content: start;
   position: relative;
-  padding-top: 2rem;
+  height: 290px;
 }
 
+/*=============== IMAGENES DE LOS SLIDERS ===============*/
 .home__img {
   height: 250px;
-  justify-self: center;
+}
+
+.img-bufanda {
+  align-self: end;
+}
+
+.img-collar {
+  object-position: 15px 20px;
+  align-self: end;
+}
+
+.img-mapa {
+  object-position: -15px 0;
+  align-self: end;
 }
 
 .home__indicador {
   width: 8px;
   height: 8px;
-  background-color: var(--titulo-color);
+  background: var(--titulo-color);
   border-radius: 50%;
   position: absolute;
-  top: 7rem;
-  right: 2rem;
+  top: 6rem;
+  right: 1rem;
 }
 
 .home__indicador::after {
@@ -419,7 +437,7 @@ button.btn-primary:hover::before {
 
 .home__detalles-img {
   position: absolute;
-  right: .5rem;
+  right: 0;
 }
 
 .home__detalles-titulo,
@@ -429,10 +447,14 @@ button.btn-primary:hover::before {
   text-align: right;
 }
 
-.home__subtitulo {
-  font-size: var(--h3-font-size);
-  text-transform: uppercase;
-  margin-bottom: var(--mb-1);
+.container-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home__data {
+  display: block;
 }
 
 .home__titulo {
@@ -442,16 +464,65 @@ button.btn-primary:hover::before {
   margin-bottom: var(--mb-1);
 }
 
+.home__subtitulo {
+  font-size: var(--h3-font-size);
+  text-transform: uppercase;
+  margin-bottom: var(--mb-1);
+}
+
 .home__descripcion {
   margin-bottom: var(--mb-1);
 }
 
 .home__btns {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
-/* SWIPER CLASS */
+/*=============== BOTONES ===============*/
+.btn {
+  background: var(--first-color);
+  color: var(--titulo-color);
+  padding: .5rem;
+  border-radius: 8px;
+  font-weight: var(--font-medium);
+  transition: .3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--first-color-alt);
+}
+
+.btn__icon {
+  font-size: 1.25rem;
+  margin-left: .5rem;
+}
+
+.btn--ghost {
+  border: 2px solid;
+  background-color: transparent;
+  border-radius: 3rem;
+  padding: .75rem 1.5rem;
+}
+
+.btn--ghost:hover {
+  background: none;
+}
+
+.btn--link {
+  color: var(--titulo-color);
+}
+
+.btn--flex {
+  display: inline-flex;
+  align-items: center;
+  text-align: end;
+  margin-left: 1rem;
+}
+
+/*=============== BOTONES SWIPER ===============*/
 .swiper-pagination {
   position: initial;
   margin-top: var(--mb-1);
@@ -474,75 +545,7 @@ button.btn-primary:hover::before {
   border-radius: .5rem;
 }
 
-/*=============== BOTONES ===============*/
-.btn {
-  display: inline-block;
-  background-color: var(--first-color);
-  color: var(--titulo-color);
-  padding: 1rem 1.75rem;
-  border-radius: .5rem;
-  font-weight: var(--font-medium);
-  transition: .3s;
-}
-
-.btn:hover {
-  background-color: var(--first-color-alt);
-}
-
-.btn__icon {
-  font-size: 1.25rem;
-}
-
-.btn--ghost {
-  border: 2px solid;
-  background-color: transparent;
-  border-radius: 3rem;
-  padding: .75rem 1.5rem;
-}
-
-.btn--ghost:hover {
-  background: none;
-}
-
-.btn--link {
-  color: var(--titulo-color);
-}
-
-.btn--flex {
-  display: inline-flex;
-  align-items: center;
-  column-gap: .5rem;
-}
-
-/*=============== CASAS ===============*/
-.casas__container {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem 2rem;
-}
-
-.casas__data {
-  text-align: center;
-}
-
-.casas__img {
-  width: 120px;
-  margin-bottom: var(--mb-0-75);
-  transition: .3s;
-}
-
-.casas__titulo {
-  margin-bottom: var(--mb-0-25);
-}
-
-.casas__data:hover .casas__img {
-  transform: translateY(-.5rem);
-}
-
 /*=============== ACERCA DE NOSOTROS ===============*/
-.about__container {
-  row-gap: 2rem;
-}
-
 .about__data {
   text-align: center;
 }
@@ -553,32 +556,53 @@ button.btn-primary:hover::before {
 
 .about__img {
   width: 200px;
-  justify-self: center;
+  margin-bottom: var(--mb-1);
 }
 
-/*=============== TIENDA DE PRODUCTOS ===============*/
-.product__container {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  padding-top: 1rem;
+/*=============== CASAS ===============*/
+.casas__img {
+  width: 160px;
+  margin-bottom: var(--mb-0-5);
+  transition: .3s;
+}
+
+.casas__data img {
+  cursor: pointer;
+}
+
+.casas__data {
+  text-align: center;
+  margin-bottom: var(--mb-1-5);
+}
+
+.ravenclaw-fix {
+  margin-bottom: 0;
+}
+
+.casas__data:hover .casas__img {
+  transform: translateY(-.5rem);
+}
+
+/*=============== PRODUCTOS ===============*/
+#product .section__titulo {
+  margin: 0;
 }
 
 .product__contenido {
   position: relative;
   background: var(--container-color);
   border-radius: 1rem;
-  padding: 1.5rem 0 1rem 0;
+  padding: 1rem 0;
   text-align: center;
   overflow: hidden;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 1rem 0;
 }
 
 .product__img {
-  width: 90px;
+  width: 100px;
   transition: .3s;
 }
 
@@ -588,8 +612,9 @@ button.btn-primary:hover::before {
 }
 
 .product__subtitulo {
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
   margin-bottom: var(--mb-0-5);
+  padding: 0 1rem;
 }
 
 .product__titulo,
@@ -625,32 +650,27 @@ button.btn-primary:hover::before {
 .descuento__container {
   background: var(--container-color);
   border-radius: 1rem;
-  padding: 2.5rem 0 1.5rem;
-  row-gap: .75rem;
+  padding: 1.5rem;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.descuento__data {
   text-align: center;
+  width: fit-content;
 }
 
 .descuento__titulo {
   font-size: var(--h2-font-size);
-  margin-bottom: var(--mb-2);
+  margin-bottom: var(--mb-0-5);
 }
 
 .descuento__img {
-  width: 200px;
-  justify-self: center;
+  width: 190px;
+  margin-bottom: var(--mb-1);
 }
 
-/*=============== RECIEN LLEGADO ===============*/
-.nuevo__container {
-  padding-top: 1rem;
+/*=============== NUEVOS PRODUCTOS ===============*/
+#nuevo .section__titulo {
+  margin-bottom: 2rem;
 }
 
 .nuevo__img {
@@ -731,31 +751,39 @@ button.btn-primary:hover::before {
 }
 
 /*=============== FOOTER ===============*/
+.footer.section {
+  padding-bottom: 2rem;
+}
+
 .footer {
   position: relative;
   overflow: hidden;
 }
 
-.footer__img-one,
-.footer__img-two {
+.footer .flex-column {
+  align-items: flex-start;
+}
+
+.footer__dumbledore,
+.footer__voldemort {
   position: absolute;
   transition: .3s;
 }
 
-.footer__img-one {
-  /* width: 100px; */
-  top: 6rem;
-  right: -6rem;
+.footer__dumbledore {
+  width: 170px;
+  top: 140px;
+  right: -90px;
 }
 
-.footer__img-two {
-  width: 100px;
-  bottom: 4rem;
-  right: 3rem;
+.footer__voldemort {
+  width: 175px;
+  top: 385px;
+  right: -90px;
 }
 
-.footer__img-one:hover,
-.footer__img-two:hover {
+.footer__dumbledore:hover,
+.footer__voldemort:hover {
   transform: translateY(-.5rem);
 }
 
@@ -766,14 +794,20 @@ button.btn-primary:hover::before {
 .footer__logo {
   display: flex;
   align-items: center;
-  column-gap: .5rem;
   margin-bottom: var(--mb-1);
   font-weight: var(--font-medium);
   color: var(--titulo-color);
+  width: 100%;
 }
 
 .footer__logo-img {
   width: 20px;
+  margin-right: 1rem;
+}
+
+.footer__titulo {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
 }
 
 .footer__descripcion {
@@ -798,11 +832,6 @@ button.btn-primary:hover::before {
   background: var(--body-color);
 }
 
-.footer__titulo {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-1);
-}
-
 .footer__links {
   display: grid;
   row-gap: .35rem;
@@ -822,7 +851,8 @@ button.btn-primary:hover::before {
   display: block;
   text-align: center;
   font-size: var(--smaller-font-size);
-  margin-top: 4.5rem;
+  margin-top: 4rem;
+  padding: 0 1rem;
 }
 
 /*=============== SCROLL UP ===============*/
