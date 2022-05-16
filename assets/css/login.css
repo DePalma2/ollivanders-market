@@ -206,3 +206,17 @@
     text-align: center;
 }
 
+/*=============== ERRORES ===============*/
+.flex {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.error {
+    text-align: start;
+    margin: 8px 8px 8px 30px;
+    color: red;
+    width: 100%;
+}

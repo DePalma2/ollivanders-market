@@ -27,13 +27,24 @@
                 <div class="form login">
                     <span class="title">Iniciar Sesion</span>
 
+                    <!-- ERRORES -->
+                    <ul class="flex">
+                        <?php require_once ('../assets/php/funcionesLogin.php') ?>
+
+                        <?php foreach ($erroresLogin as $error) : ?>
+                        <li class="error"><?php echo $error ?></li>
+                        <?php endforeach ?>
+                    </ul>
+
                     <!-- LOGIN FORM -->
-                    <form action="#">
+                    <form action="login.php" method="POST">
                         <div class="input-field">
-                            <input type="text" placeholder="Ingresa tu email" required>
+                            <input required type="email" name="emailLogin" placeholder="Ingresa tu email"
+                                value="<?php echo $emailLogin ?>">
                         </div>
                         <div class="input-field">
-                            <input type="password" class="password" placeholder="Ingresa tu contraseña" required>
+                            <input required type="password" class="password" name="passwordLogin"
+                                placeholder="Ingresa tu contraseña">
                         </div>
 
                         <div class="checkbox-text">
@@ -44,7 +55,7 @@
                             <a href="#" class="text">Olvidaste tu contraseña?</a>
                         </div>
                         <div class="input-field button">
-                            <input type="button" value="Ingresar">
+                            <input name="submit1" type="button" value="Ingresar">
                         </div>
                     </form>
 
@@ -53,7 +64,7 @@
                             <a href="#" class="text signup-link">Registrate aqui</a>
                         </span>
                         <br>
-                        <span class="text">Para volver a la pagina principal haga 
+                        <span class="text">Para volver a la pagina principal haga
                             <a href="../index.html" class="text signup-link">click aqui</a>
                         </span>
                     </div>
@@ -63,20 +74,31 @@
                 <div class="form signup">
                     <span class="title">Registro</span>
 
+                    <!-- ERRORES -->
+                    <ul class="flex">
+                        <?php foreach ($erroresRegister as $error) : ?>
+                        <li class="error"><?php echo $error ?></li>
+                        <?php endforeach ?>
+                    </ul>
+
                     <form action="#">
                         <div class="input-field">
-                            <input type="text" placeholder="Ingresa tu nombre" required>
+                            <input required type="text" name="nameRegister" placeholder="Ingresa tu nombre"
+                                value="<?php echo $nameRegister ?>">
                         </div>
                         <div class="input-field">
-                            <input type="text" placeholder="Ingresa tu email" required>
+                            <input required type="email" name="emailRegister" placeholder="Ingresa tu email"
+                                value="<?php echo $emailRegister ?>">
 
                         </div>
                         <div class="input-field">
-                            <input type="password" class="password" placeholder="Ingresa tu contraseña" required>
+                            <input required type="password" class="password" name="passwordRegister1"
+                                placeholder="Ingresa tu contraseña">
                             <i class="uil uil-lock icon"></i>
                         </div>
                         <div class="input-field">
-                            <input type="password" class="password" placeholder="Confirma tu contraseña" required>
+                            <input required type="password" class="password" name="passwordRegister2"
+                                placeholder="Confirma tu contraseña">
                         </div>
 
                         <div class="checkbox-text">
@@ -87,7 +109,7 @@
                         </div>
 
                         <div class="input-field button">
-                            <input type="button" value="Registrarse">
+                            <input type="button" name="submit2" value="Registrarse">
                         </div>
                     </form>
 
@@ -96,7 +118,7 @@
                             <a href="#" class="text login-link">Ingresa sesion</a>
                         </span>
                         <br>
-                        <span class="text">Para volver a la pagina principal haga 
+                        <span class="text">Para volver a la pagina principal haga
                             <a href="../index.html" class="text signup-link">click aqui</a>
                         </span>
                     </div>
@@ -104,7 +126,7 @@
             </div>
         </div>
     </div>
-    
+
     <!--=============== MAIN JS ===============-->
     <script src="../assets/js/login.js"></script>
 </body>
