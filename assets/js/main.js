@@ -9,6 +9,14 @@ $(function () {
     });
 });
 
+/*=============== BOTON RESPONSIVE ===============*/
+
+const hamburgerMenu = document.querySelector(".hamburger");
+const menuIsActive = () => { 
+    hamburgerMenu.classList.toggle("active");
+};
+hamburgerMenu.addEventListener("click", menuIsActive);
+
 
 /*=============== HOME SLIDER ===============*/
 let homeSwiper = new Swiper(".home-swiper", {
