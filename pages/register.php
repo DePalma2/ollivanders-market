@@ -27,28 +27,41 @@
 <div class="bg-form">
         <!--==================== CONTACTO ====================-->
         <div class="container-form">
-            <form class="contact-form" action="login.php" method="POST">
+            <form class="contact-form" action="register.php" method="POST">
                 <span class="contact-form-title">Contacto</span>
 
                 <!-- ERRORES -->
                 <ul class="flex">
                     <?php require_once ('../assets/php/funcionesLogin.php') ?>
-                    <?php foreach ($erroresLogin as $error) : ?>
+                    <?php foreach ($erroresRegister  as $error) : ?>
                     <li class="error"><?php echo $error ?></li>
                     <?php endforeach ?>
                 </ul>
 
                 <div class="container-inputs">
-                    <div class="input-group">
+
+                <div class="input-group">
                         <input required type="text" name="email" autocomplete="off" class="input"
-                            value="<?php echo $emailLogin ?>">
-                        <label class="user-label">Email</label>
+                            value="<?php echo $nameRegister ?>">
+                        <label class="user-label">Nombre</label>
                     </div>
 
                     <div class="input-group">
                         <input required type="text" name="email" autocomplete="off" class="input"
-                            value="<?php echo $passwordLogin?>">
+                            value="<?php echo $emailRegister  ?>">
+                        <label class="user-label">Email</label>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input required type="text" name="email" autocomplete="off" class="input"
+                            value="<?php echo $passwordRegister1 ?>">
                         <label class="user-label">Contraseña</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input required type="text" name="email" autocomplete="off" class="input"
+                            value="<?php echo $passwordRegister2 ?>">
+                        <label class="user-label">Repetir contraseña</label>
                     </div>
 
                 </div>
@@ -56,7 +69,7 @@
                 <div class="container-contact-form-btn">
                     <div class="wrap-contact-form-btn">
                         <div class="contact-form-bgbtn"></div>
-                        <button name="submit" class="contact-form-btn">Ingresar</button>
+                        <button name="submit" class="contact-form-btn">Registrarse</button>
                     </div>
                 </div>
 
@@ -65,8 +78,8 @@
                         <a href="../index.html" class="text">click aqui</a>
                     </span>
                     <br>
-                    <span class="text">Si no tiene cuenta puede registrarse haciendo
-                        <a href="register.php" class="text">click aqui</a>
+                    <span class="text">Si ya tiene una cuenta puede ingresar haciendo
+                        <a href="login.php" class="text">click aqui</a>
                     </span>
                 </div>
             </form>
