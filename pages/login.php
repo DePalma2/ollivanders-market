@@ -25,10 +25,10 @@
 
 <body>
 <div class="bg-form">
-        <!--==================== CONTACTO ====================-->
+        <!--==================== LOGIN ====================-->
         <div class="container-form">
             <form class="contact-form" action="login.php" method="POST">
-                <span class="contact-form-title">Contacto</span>
+                <span class="contact-form-title">Login</span>
 
                 <!-- ERRORES -->
                 <ul class="flex">
@@ -40,13 +40,13 @@
 
                 <div class="container-inputs">
                     <div class="input-group">
-                        <input required type="text" name="email" autocomplete="off" class="input"
+                        <input required type="email" name="emailLogin" autocomplete="off" class="input"
                             value="<?php echo $emailLogin ?>">
                         <label class="user-label">Email</label>
                     </div>
 
                     <div class="input-group">
-                        <input required type="text" name="email" autocomplete="off" class="input"
+                        <input required type="password" name="passwordLogin" autocomplete="off" class="input"
                             value="<?php echo $passwordLogin?>">
                         <label class="user-label">Contraseña</label>
                     </div>

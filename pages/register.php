@@ -25,14 +25,14 @@
 
 <body>
 <div class="bg-form">
-        <!--==================== CONTACTO ====================-->
+        <!--==================== REGISTER ====================-->
         <div class="container-form">
             <form class="contact-form" action="register.php" method="POST">
-                <span class="contact-form-title">Contacto</span>
+                <span class="contact-form-title">Register</span>
 
                 <!-- ERRORES -->
                 <ul class="flex">
-                    <?php require_once ('../assets/php/funcionesLogin.php') ?>
+                    <?php require_once ('../assets/php/funcionesRegister.php') ?>
                     <?php foreach ($erroresRegister  as $error) : ?>
                     <li class="error"><?php echo $error ?></li>
                     <?php endforeach ?>
@@ -41,25 +41,25 @@
                 <div class="container-inputs">
 
                 <div class="input-group">
-                        <input required type="text" name="email" autocomplete="off" class="input"
+                        <input required type="text" name="nameRegister" autocomplete="off" class="input"
                             value="<?php echo $nameRegister ?>">
                         <label class="user-label">Nombre</label>
                     </div>
 
                     <div class="input-group">
-                        <input required type="text" name="email" autocomplete="off" class="input"
+                        <input required type="email" name="emailRegister" autocomplete="off" class="input"
                             value="<?php echo $emailRegister  ?>">
                         <label class="user-label">Email</label>
                     </div>
                     
                     <div class="input-group">
-                        <input required type="text" name="email" autocomplete="off" class="input"
+                        <input required type="password" name="passwordRegister1" autocomplete="off" class="input"
                             value="<?php echo $passwordRegister1 ?>">
                         <label class="user-label">Contraseña</label>
                     </div>
 
                     <div class="input-group">
-                        <input required type="text" name="email" autocomplete="off" class="input"
+                        <input required type="password" name="passwordRegister2" autocomplete="off" class="input"
                             value="<?php echo $passwordRegister2 ?>">
                         <label class="user-label">Repetir contraseña</label>
                     </div>
