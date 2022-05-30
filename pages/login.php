@@ -20,7 +20,7 @@
     <!--=============== RESPONSIVE ===============-->
     <link rel="stylesheet" href="../assets/css/responsive.css">
 
-    <title>Olivander's Market</title>
+    <title>Ollivander's Market</title>
 </head>
 
 <body>
@@ -32,6 +32,7 @@
 
                 <!-- ERRORES -->
                 <ul class="flex">
+                    <?php require_once('../assets/php/dashboard/helpers/helper_input.php') ?>
                     <?php require_once ('../assets/php/funcionesLogin.php') ?>
                     <?php foreach ($erroresLogin as $error) : ?>
                     <li class="error"><?php echo $error ?></li>

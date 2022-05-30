@@ -1,13 +1,5 @@
 <?php
 
-function test_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
 //REGISTER
 $nameRegister = test_input($_POST['nameRegister'] ?? null);
 $emailRegister = test_input($_POST['emailRegister'] ?? null);

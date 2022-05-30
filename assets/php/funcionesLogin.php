@@ -1,12 +1,6 @@
 <?php
 
-function test_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
+$flag = false;
 
 //LOGIN
 $emailLogin = test_input($_POST['emailLogin'] ?? null);
@@ -26,8 +20,14 @@ if (isset($_POST['submit'])) {
         array_push($erroresLogin, 'Debe ingresar una contraseña.');
     }
 
+    //VALIDACION DE ADMINISTRADOR
+    if ($emailLogin === 'admin@admin.com' && $passwordLogin === 'admin') {
+        header('Location: ../assets/php/dashboard/productos.php');
+        $flag = true;
+    }
+
     //SI NO HAY ERRORES ME REDIRECCIONA
-    if (count($erroresLogin) == 0) {
+    if (count($erroresLogin) == 0 && $flag == false) {
         header('Location: login.php');
     }
 }

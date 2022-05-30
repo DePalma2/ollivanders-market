@@ -1,13 +1,5 @@
 <?php
 
-function test_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
 $name = test_input($_POST['name'] ?? null);
 $email = test_input($_POST['email'] ?? null);
 $msg = test_input($_POST['msg'] ?? null);

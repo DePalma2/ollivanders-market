@@ -1,14 +1,14 @@
 # Olivander's Market
 
 ## Maquetado que falta:
-- [ ] Dashboard administrativo.
+- [X] Dashboard administrativo.
 
 ## Funcionalidades:
-- [ ] Base de datos.
-- [ ] Loggin.
-- [ ] Register.
+- [X] Base de datos.
+- [X] Loggin.
+- [X] Register.
 - [ ] Roles (Usuario/Administrador).
-- [ ] Que el administrador pueda crear, editar y eliminar publicaciones.
+- [X] Que el administrador pueda crear, editar y eliminar publicaciones.
 - [ ] Que el administrador pueda ver, modificar, y eliminar usuarios y sus roles.
 - [ ] Backend para el envío del email (localhost).
 - [ ] Página en varios idiomas (Español dafault, inglés, portugues).
