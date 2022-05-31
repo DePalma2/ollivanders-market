@@ -8,6 +8,6 @@ define('BASE_URL', 'http://localhost/olivandersMarket/');
 
 //Base de datos
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'olivanders_market');
+define('DB_NAME', 'ollivanders_market');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
