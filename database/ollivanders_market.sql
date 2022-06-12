@@ -11,12 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
 -- Database: `ollivanders_market`
 --
@@ -26,7 +20,7 @@ USE `ollivanders_market`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categorias`
+-- Estructura para la tabla `categorias`
 --
 
 CREATE TABLE IF NOT EXISTS `categorias` (
@@ -34,10 +28,6 @@ CREATE TABLE IF NOT EXISTS `categorias` (
   `nombre` varchar(255) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `categorias`
---
 
 INSERT INTO `categorias` (`id`, `nombre`) VALUES
 (1, 'Varitas'),
@@ -48,7 +38,7 @@ INSERT INTO `categorias` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productos`
+-- Estructura para la tabla `productos`
 --
 
 CREATE TABLE IF NOT EXISTS `productos` (
@@ -63,10 +53,6 @@ CREATE TABLE IF NOT EXISTS `productos` (
   PRIMARY KEY (`id`),
   KEY `id_categoria` (`id_categoria`)
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
---
--- Dumping data for table `productos`
---
 
 INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `id_categoria`, `fecha_alta`, `fecha_modificacion`, `fecha_baja`) VALUES
 (1, 'Ron Weasley', 'Varita Ollivanders Original con caja', 59.99, 1, '2022-05-30 20:42:06', '2022-05-30 20:42:06', NULL),
@@ -97,7 +83,7 @@ INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `id_categoria`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipo_usuarios`
+-- Estructura de la tabla `tipo_usuarios`
 --
 
 CREATE TABLE IF NOT EXISTS `tipo_usuarios` (
@@ -106,18 +92,12 @@ CREATE TABLE IF NOT EXISTS `tipo_usuarios` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `tipo_usuarios`
---
-
 INSERT INTO `tipo_usuarios` (`id`, `nombre`) VALUES
 (1, 'Administrador'),
 (2, 'Comprador');
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `usuarios`
+-- Estructura de la tabla `usuarios`
 --
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
@@ -136,25 +116,20 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Constraints for dumped tables
---
-
---
--- Constraints for table `productos`
+-- Constraints para la tabla `productos`
 --
 ALTER TABLE `productos`
-  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `productos_ibfk_1`
+  FOREIGN KEY (`id_categoria`)
+  REFERENCES `categorias` (`id`)
+  ON UPDATE CASCADE;
 
 --
--- Constraints for table `usuarios`
+-- Constraints para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_tipo_usuario`) REFERENCES `tipo_usuarios` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `usuarios_ibfk_1`
+  FOREIGN KEY (`id_tipo_usuario`)
+  REFERENCES `tipo_usuarios` (`id`)
+  ON UPDATE CASCADE;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
-
