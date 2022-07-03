@@ -34,12 +34,14 @@
             </ul>
 
             <!-- BOTON LANG -->
-            <ul class="langButton">
-                <li><a href="?lang=es"><span class="fi fi-es"></span></a></li>
-                <li><a href="?lang=pt"><span class="fi fi-pt"></span></a></li>
-                <li><a href="?lang=en"><span class="fi fi-us"></span></a></li>
-                <li class="selector"></li>
-            </ul>
+            <div class="card">
+                <ul class="langButton">
+                    <li id="btnEs"><a href="?lang=es"><span class="fi fi-es"></span></a></li>
+                    <li id="btnPt"><a href="?lang=pt"><span class="fi fi-pt"></span></a></li>
+                    <li id="btnEn"><a href="?lang=en"><span class="fi fi-us"></span></a></li>
+                    <li class="selector"></li>
+                </ul>
+            </div>
 
             <a href="login.php" class="d-none"><button class="btn-primary"><?php echo $lang['header_iniciarSesion']?></button></a>
             <div class="btn-hamburguesa">
