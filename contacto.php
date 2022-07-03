@@ -1,26 +1,17 @@
+<?php require_once('assets/php/lang.php'); ?>
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="<?php $idioma ?>">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== HEAD DEFAULT ===============-->
+    <?php require_once('assets/php/dashboard/views/_head.php'); ?>
 
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="../assets/img/logo.png " type="image/x-icon">
-
-    <!--=============== BOXICONS ===============-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
-    <!--=============== FLAG ICON ===============-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.2.0/css/flag-icons.min.css">
+    <!--=============== ICONS ===============-->
+    <?php require_once('assets/php/dashboard/views/_icons.php'); ?>
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="../assets/css/contacto.css">
-
-    <!--=============== RESPONSIVE ===============-->
-    <link rel="stylesheet" href="../assets/css/responsive.css">
-
-    <title>Ollivander's Market</title>
+    <?php require_once('assets/php/dashboard/views/_cssContacto.php'); ?>
 </head>
 
 <body>
@@ -28,12 +19,12 @@
         <!--==================== CONTACTO ====================-->
         <div class="container-form">
             <form class="contact-form" action="contacto.php" method="POST">
-                <span class="contact-form-title">Contacto</span>
+                <span class="contact-form-title"><?php echo $lang['header_contacto']?></span>
 
                 <!-- ERRORES -->
                 <ul class="flex">
-                    <?php require_once('../assets/php/dashboard/helpers/helper_input.php') ?>
-                    <?php require_once ('../assets/php/funcionesContacto.php') ?>
+                    <?php require_once('assets/php/dashboard/helpers/helper_input.php') ?>
+                    <?php require_once ('assets/php/funcionesContacto.php') ?>
 
                     <?php foreach ($errores as $error) : ?>
                     <li class="error"><?php echo $error ?></li>
@@ -44,7 +35,7 @@
                     <div class="input-group">
                         <input required type="text" name="name" autocomplete="off" class="input"
                             value="<?php echo $name ?>">
-                        <label class="user-label">Nombre</label>
+                        <label class="user-label"><?php echo $lang['contacto_nombre']?></label>
                     </div>
 
                     <div class="input-group">
@@ -55,20 +46,20 @@
 
                     <div class="input-group">
                         <textarea required name="msg" autocomplete="off" class="input"></textarea>
-                        <label class="user-label">Mensaje</label>
+                        <label class="user-label"><?php echo $lang['contacto_mensaje']?></label>
                     </div>
                 </div>
 
                 <div class="container-contact-form-btn">
                     <div class="wrap-contact-form-btn">
                         <div class="contact-form-bgbtn"></div>
-                        <button name="submit" class="contact-form-btn">Envíar</button>
+                        <button name="submit" class="contact-form-btn"><?php echo $lang['contacto_btn']?></button>
                     </div>
                 </div>
 
                 <div class="return-index">
                     <span class="text">Para volver a la pagina principal haga
-                        <a href="../index.html" class="text">click aqui</a>
+                        <a href="index.php" class="text">click aqui</a>
                     </span>
                 </div>
             </form>

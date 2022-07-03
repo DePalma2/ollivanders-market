@@ -226,7 +226,6 @@
 
   .container-btn-hamburguesa li {
     margin: 0 1rem;
-    inline-size: min-content;
   }
 
   .btn-hamburguesa {

@@ -1,26 +1,20 @@
+<?php require_once('assets/php/lang.php'); ?>
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="<?php $idioma ?>">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== HEAD DEFAULT ===============-->
+    <?php require_once('assets/php/dashboard/views/_head.php'); ?>
 
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="../assets/img/logo.png " type="image/x-icon">
+    <!--=============== ICONS ===============-->
+    <?php require_once('assets/php/dashboard/views/_icons.php'); ?>
 
-    <!--=============== BOXICONS ===============-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!--=============== CSS ===============-->
+   <?php require_once('assets/php/dashboard/views/_cssContacto.php'); ?>
 
     <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
-
-   <!--=============== CSS ===============-->
-   <link rel="stylesheet" href="../assets/css/contacto.css">
-
-    <!--=============== RESPONSIVE ===============-->
-    <link rel="stylesheet" href="../assets/css/responsive.css">
-
-    <title>Ollivander's Market</title>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -28,12 +22,12 @@
         <!--==================== LOGIN ====================-->
         <div class="container-form">
             <form class="contact-form" action="login.php" method="POST">
-                <span class="contact-form-title">Login</span>
+                <span class="contact-form-title"><?php echo $lang['header_iniciarSesion']?></span>
 
                 <!-- ERRORES -->
                 <ul class="flex">
-                    <?php require_once('../assets/php/dashboard/helpers/helper_input.php') ?>
-                    <?php require_once ('../assets/php/funcionesLogin.php') ?>
+                    <?php require_once('assets/php/dashboard/helpers/helper_input.php') ?>
+                    <?php require_once ('assets/php/funcionesLogin.php') ?>
                     <?php foreach ($erroresLogin as $error) : ?>
                     <li class="error"><?php echo $error ?></li>
                     <?php endforeach ?>
@@ -49,7 +43,7 @@
                     <div class="input-group">
                         <input required type="password" name="passwordLogin" autocomplete="off" class="input"
                             value="<?php echo $passwordLogin?>">
-                        <label class="user-label">Contraseña</label>
+                        <label class="user-label"><?php echo $lang['login_password_1']?></label>
                     </div>
 
                 </div>
@@ -57,13 +51,13 @@
                 <div class="container-contact-form-btn">
                     <div class="wrap-contact-form-btn">
                         <div class="contact-form-bgbtn"></div>
-                        <button name="submit" class="contact-form-btn">Ingresar</button>
+                        <button name="submit" class="contact-form-btn"><?php echo $lang['login_btn']?></button>
                     </div>
                 </div>
 
                 <div class="return-index">
                     <span class="text">Para volver a la pagina principal haga
-                        <a href="../index.html" class="text">click aqui</a>
+                        <a href="index.php" class="text">click aqui</a>
                     </span>
                     <br>
                     <span class="text">Si no tiene cuenta puede registrarse haciendo
@@ -75,7 +69,7 @@
     </div>
 
     <!--=============== MAIN JS ===============-->
-    <script src="../assets/js/login.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 
 </html>
