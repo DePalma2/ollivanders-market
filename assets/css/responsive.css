@@ -28,12 +28,8 @@
   }
 
   /*=============== CONTACTO ===============*/
-  .input,
   textarea {
     width: 300px;
-  }
-
-  textarea {
     height: 200px;
   }
 }
@@ -100,12 +96,8 @@
     width: 500px;
   }
 
-  .input,
   textarea {
     width: 400px;
-  }
-
-  textarea {
     height: 150px;
   }
 }

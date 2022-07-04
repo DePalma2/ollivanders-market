@@ -10,18 +10,19 @@
     <!--=============== ICONS ===============-->
     <?php require_once('assets/php/dashboard/views/_icons.php'); ?>
 
+    <!--=============== BOOTSTRAP ===============-->
+    <?php require_once('assets/php/dashboard/views/_bootstrap.php'); ?>
+
     <!--=============== CSS ===============-->
     <?php require_once('assets/php/dashboard/views/_cssContacto.php'); ?>
 </head>
 
 <body>
     <div class="bg-form">
-        <!--==================== CONTACTO ====================-->
         <div class="container-form">
-            <form class="contact-form" action="contacto.php" method="POST">
-                <span class="contact-form-title"><?php echo $lang['header_contacto']?></span>
+            <form class="contact-form px-5" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
+            <span class="contact-form-title"><?php echo $lang['header_contacto']?></span>
 
-                <!-- ERRORES -->
                 <ul class="flex">
                     <?php require_once('assets/php/dashboard/helpers/helper_input.php') ?>
                     <?php require_once ('assets/php/funcionesContacto.php') ?>
@@ -32,21 +33,21 @@
                 </ul>
 
                 <div class="container-inputs">
-                    <div class="input-group">
-                        <input required type="text" name="name" autocomplete="off" class="input"
+                    <div class="col-sm-12 mb-3">
+                        <label class="form-label"><?php echo $lang['contacto_nombre']?></label>
+                        <input required type="text" name="name" autocomplete="off" class="form-control"
                             value="<?php echo $name ?>">
-                        <label class="user-label"><?php echo $lang['contacto_nombre']?></label>
                     </div>
 
-                    <div class="input-group">
-                        <input required type="text" name="email" autocomplete="off" class="input"
+                    <div class="col-sm-12 mb-3">
+                        <label class="form-label">Email</label>
+                        <input required type="text" name="email" autocomplete="off" class="form-control" placeholder="<?php echo $lang['contacto_placeholder_email']?>"
                             value="<?php echo $email ?>">
-                        <label class="user-label">Email</label>
                     </div>
 
-                    <div class="input-group">
-                        <textarea required name="msg" autocomplete="off" class="input"></textarea>
-                        <label class="user-label"><?php echo $lang['contacto_mensaje']?></label>
+                    <div class="col-sm-12 mb-3">
+                        <label class="form-label"><?php echo $lang['contacto_mensaje']?></label>
+                        <textarea required name="msg" autocomplete="off" class="form-control" placeholder="<?php echo $lang['contacto_placeholder_mensaje']?>"></textarea>
                     </div>
                 </div>
 

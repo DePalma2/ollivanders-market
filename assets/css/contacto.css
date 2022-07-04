@@ -32,6 +32,7 @@ button {
     justify-content: start;
     align-items: start;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 .error {
@@ -76,47 +77,6 @@ button {
     justify-content: center;
     align-content: center;
     align-items: center;
-}
-
-.input-group {
-    position: relative;
-}
-
-.input {
-    border: solid 1.5px #4d4d4d;
-    border-radius: 1rem;
-    background: none;
-    padding: 1rem;
-    margin: 1rem 0;
-    transition: all 0.3s ease;
-}
-
-.user-label {
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    color: var(--text-black);
-    pointer-events: none;
-    transform: translateY(1rem);
-    transition: all 0.3s ease;
-}
-
-.input:focus,
-input:valid,
-textarea:focus,
-textarea:valid {
-    outline: none;
-    border: 1.5px solid var(--main);
-}
-
-.input:focus~label,
-input:valid~label,
-textarea:focus~label,
-textarea:valid~label {
-    transform: translateY(-50%) scale(0.8);
-    background: var(--text-white);
-    padding: 0 .2em;
-    color: var(--main);
 }
 
 /*=============== TEXTAREA ===============*/

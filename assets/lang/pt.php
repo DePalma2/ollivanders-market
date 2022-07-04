@@ -74,6 +74,8 @@ $lang = array(
     "contacto_nombre" => "Nome",
     "contacto_mensaje" => "Mensagem",
     "contacto_btn" => "Mandar",
+    "contacto_placeholder_email" => "email@exemplo.com.ar",
+    "contacto_placeholder_mensaje" => "Deixe-nos a sua mensagem",
 
     //LOGIN
     "login_password_1" => "Senha",
@@ -83,4 +85,10 @@ $lang = array(
     "register_titulo" => "Registro",
     "register_password_2" => "Repetir a senha",
     "register_btn" => "Check-in"
+
+    //ERRORES
+    "contacto_error_nombre" => "Você deve inserir um nome correto",
+    "contacto_error_email" => "Você deve inserir um e-mail válido",
+    "contacto_error_mensaje" => "Você deve digitar uma mensagem",
+    "contacto_error_envio" => "Por algum motivo a mensagem não foi enviada"
 );
