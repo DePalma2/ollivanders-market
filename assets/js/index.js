@@ -76,13 +76,6 @@ let btnEn = document.getElementById('btnEn');
 
 let selector = document.getElementById('selector');
 
-$(document).ready(function() {
-    $('li').on('click', function() {
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-    })
-});
-
 /* Escucha para el boton en español */
 btnEs.addEventListener('click', () => {
     if (!btnEs.classList.contains('active')) {

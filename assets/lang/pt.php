@@ -4,7 +4,7 @@ $lang = array(
 
     //HEADER
     "header_iniciarSesion" => "Iniciar sessão",
-    "header_inicio" => "Começar",
+    "header_inicio" => "Início",
     "header_nosotros" => "Nós",
     "header_productos" => "Produtos",
     "header_contacto" => "Contato",
