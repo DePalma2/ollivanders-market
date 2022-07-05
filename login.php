@@ -10,66 +10,86 @@
     <!--=============== ICONS ===============-->
     <?php require_once('assets/php/dashboard/views/_icons.php'); ?>
 
-    <!--=============== CSS ===============-->
-   <?php require_once('assets/php/dashboard/views/_cssContacto.php'); ?>
+    <!--=============== BOOTSTRAP ===============-->
+    <?php require_once('assets/php/dashboard/views/_bootstrap.php'); ?>
 
-    <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--=============== CSS ===============-->
+    <?php require_once('assets/php/dashboard/views/_cssContacto.php'); ?>
 </head>
 
 <body>
-<div class="bg-form">
-        <!--==================== LOGIN ====================-->
-        <div class="container-form">
-            <form class="contact-form" action="login.php" method="POST">
-                <span class="contact-form-title"><?php echo $lang['header_iniciarSesion']?></span>
+    <header>
+        <nav class="flex">
+            <ul class="container-logo">
+                <li class="logo flex"><img src="assets/img/varios/logo.png"></li>
+                <li class="text-logo"><a href="index.php">Ollivander's</a></li>
+            </ul>
 
-                <!-- ERRORES -->
-                <ul class="flex">
-                    <?php require_once('assets/php/dashboard/helpers/helper_input.php') ?>
-                    <?php require_once ('assets/php/funcionesLogin.php') ?>
-                    <?php foreach ($erroresLogin as $error) : ?>
-                    <li class="error"><?php echo $error ?></li>
-                    <?php endforeach ?>
+            <!-- BOTON LANG -->
+            <div class="card">
+                <ul class="langButton">
+                    <li id="btnEs"><a href="?lang=es"><span class="fi fi-es"></span></a></li>
+                    <li id="btnPt"><a href="?lang=pt"><span class="fi fi-pt"></span></a></li>
+                    <li id="btnEn"><a href="?lang=en"><span class="fi fi-us"></span></a></li>
                 </ul>
+            </div>
 
-                <div class="container-inputs">
-                    <div class="input-group">
-                        <input required type="email" name="emailLogin" autocomplete="off" class="input"
-                            value="<?php echo $emailLogin ?>">
-                        <label class="user-label">Email</label>
-                    </div>
+            <a href="register.php" class="d-block"><button
+                    class="btn-main"><?php echo $lang['register_btn']?></button></a>
 
-                    <div class="input-group">
-                        <input required type="password" name="passwordLogin" autocomplete="off" class="input"
-                            value="<?php echo $passwordLogin?>">
-                        <label class="user-label"><?php echo $lang['login_password_1']?></label>
-                    </div>
+        </nav>
+    </header>
 
+    <div class="container-form">
+
+        <?php require_once('assets/php/dashboard/helpers/helper_input.php') ?>
+        <?php require_once ('assets/php/funcionesLogin.php') ?>
+
+        <form class="contact-form px-5" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
+            <span class="contact-form-title"><?php echo $lang['header_iniciarSesion']?></span>
+
+            <!-- ERRORES -->
+            <ul class="flex">
+                <?php foreach ($erroresLogin as $error) : ?>
+                <li class="error"><?php echo $error ?></li>
+                <?php endforeach ?>
+            </ul>
+
+            <div class="container-inputs">
+                <div class="col-sm-12 mb-3">
+                    <label class="form-label">Email</label>
+                    <input required type="text" name="emailLogin" autocomplete="off" class="form-control"
+                        placeholder="<?php echo $lang['contacto_placeholder_email']?>" value="<?php echo $emailLogin ?>">
                 </div>
 
-                <div class="container-contact-form-btn">
-                    <div class="wrap-contact-form-btn">
-                        <div class="contact-form-bgbtn"></div>
-                        <button name="submit" class="contact-form-btn"><?php echo $lang['login_btn']?></button>
-                    </div>
+                <div class="col-sm-12 mb-3">
+                    <label class="form-label"><?php echo $lang['login_password_1']?></label>
+                    <input required type="password" name="passwordLogin" autocomplete="off" class="form-control"
+                        value="<?php echo $passwordLogin?>">
                 </div>
 
-                <div class="return-index">
-                    <span class="text">Para volver a la pagina principal haga
-                        <a href="index.php" class="text">click aqui</a>
-                    </span>
-                    <br>
-                    <span class="text">Si no tiene cuenta puede registrarse haciendo
-                        <a href="register.php" class="text">click aqui</a>
-                    </span>
+            </div>
+
+            <div class="container-contact-form-btn">
+                <div class="wrap-contact-form-btn">
+                    <div class="contact-form-bgbtn"></div>
+                    <button name="submit" class="contact-form-btn"><?php echo $lang['login_btn']?></button>
                 </div>
-            </form>
-        </div>
+            </div>
+
+            <div class="return-index">
+                <span class="text"><?php echo $lang['return_index']?>
+                    <a href="index.php" class="text"><?php echo $lang['return_index_click']?></a>
+                </span>
+            </div>
+        </form>
     </div>
 
-    <!--=============== MAIN JS ===============-->
+    <!--=============== LOCAL JS ===============-->
     <script src="assets/js/login.js"></script>
+
+    <!--=============== GLOBAL JS ===============-->
+    <script src="assets/js/btnLang.js"></script>
 </body>
 
 </html>

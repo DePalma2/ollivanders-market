@@ -18,54 +18,80 @@
 </head>
 
 <body>
-    <div class="bg-form">
-        <div class="container-form">
-            <form class="contact-form px-5" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
+    <header>
+        <nav class="flex">
+            <ul class="container-logo">
+                <li class="logo flex"><img src="assets/img/varios/logo.png"></li>
+                <li class="text-logo"><a href="index.php">Ollivander's</a></li>
+            </ul>
+
+            <!-- BOTON LANG -->
+            <div class="card">
+                <ul class="langButton">
+                    <li id="btnEs"><a href="?lang=es"><span class="fi fi-es"></span></a></li>
+                    <li id="btnPt"><a href="?lang=pt"><span class="fi fi-pt"></span></a></li>
+                    <li id="btnEn"><a href="?lang=en"><span class="fi fi-us"></span></a></li>
+                </ul>
+            </div>
+
+            <a href="login.php" class="d-block"><button
+                    class="btn-main"><?php echo $lang['header_iniciarSesion']?></button></a>
+
+        </nav>
+    </header>
+
+    <div class="container-form">
+
+        <?php require_once('assets/php/dashboard/helpers/helper_input.php') ?>
+        <?php require_once ('assets/php/funcionesContacto.php') ?>
+
+        <form class="contact-form px-5" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST"
+            enctype="multipart/form-data">
             <span class="contact-form-title"><?php echo $lang['header_contacto']?></span>
 
-                <ul class="flex">
-                    <?php require_once('assets/php/dashboard/helpers/helper_input.php') ?>
-                    <?php require_once ('assets/php/funcionesContacto.php') ?>
+            <ul class="flex-form">
+                <?php foreach ($errores as $error) : ?>
+                <li class="error"><?php echo $error ?></li>
+                <?php endforeach ?>
+            </ul>
 
-                    <?php foreach ($errores as $error) : ?>
-                    <li class="error"><?php echo $error ?></li>
-                    <?php endforeach ?>
-                </ul>
-
-                <div class="container-inputs">
-                    <div class="col-sm-12 mb-3">
-                        <label class="form-label"><?php echo $lang['contacto_nombre']?></label>
-                        <input required type="text" name="name" autocomplete="off" class="form-control"
-                            value="<?php echo $name ?>">
-                    </div>
-
-                    <div class="col-sm-12 mb-3">
-                        <label class="form-label">Email</label>
-                        <input required type="text" name="email" autocomplete="off" class="form-control" placeholder="<?php echo $lang['contacto_placeholder_email']?>"
-                            value="<?php echo $email ?>">
-                    </div>
-
-                    <div class="col-sm-12 mb-3">
-                        <label class="form-label"><?php echo $lang['contacto_mensaje']?></label>
-                        <textarea required name="msg" autocomplete="off" class="form-control" placeholder="<?php echo $lang['contacto_placeholder_mensaje']?>"></textarea>
-                    </div>
+            <div class="container-inputs">
+                <div class="col-sm-12 mb-3">
+                    <label class="form-label"><?php echo $lang['contacto_nombre']?></label>
+                    <input required type="text" name="name" autocomplete="off" class="form-control"
+                        value="<?php echo $name ?>">
                 </div>
 
-                <div class="container-contact-form-btn">
-                    <div class="wrap-contact-form-btn">
-                        <div class="contact-form-bgbtn"></div>
-                        <button name="submit" class="contact-form-btn"><?php echo $lang['contacto_btn']?></button>
-                    </div>
+                <div class="col-sm-12 mb-3">
+                    <label class="form-label">Email</label>
+                    <input required type="text" name="email" autocomplete="off" class="form-control"
+                        placeholder="<?php echo $lang['contacto_placeholder_email']?>" value="<?php echo $email ?>">
                 </div>
 
-                <div class="return-index">
-                    <span class="text">Para volver a la pagina principal haga
-                        <a href="index.php" class="text">click aqui</a>
-                    </span>
+                <div class="col-sm-12 mb-3">
+                    <label class="form-label"><?php echo $lang['contacto_mensaje']?></label>
+                    <textarea required name="msg" autocomplete="off" class="form-control"
+                        placeholder="<?php echo $lang['contacto_placeholder_mensaje']?>"></textarea>
                 </div>
-            </form>
-        </div>
+            </div>
+
+            <div class="container-contact-form-btn">
+                <div class="wrap-contact-form-btn">
+                    <div class="contact-form-bgbtn"></div>
+                    <button name="submit" class="contact-form-btn"><?php echo $lang['contacto_btn']?></button>
+                </div>
+            </div>
+
+            <div class="return-index">
+                <span class="text"><?php echo $lang['return_index']?>
+                    <a href="index.php" class="text"><?php echo $lang['return_index_click']?></a>
+                </span>
+            </div>
+        </form>
     </div>
+
+    <!--=============== GLOBAL JS ===============-->
+    <script src="assets/js/btnLang.js"></script>
 </body>
 
 </html>

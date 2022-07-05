@@ -1,6 +1,7 @@
 <?php
 
-//REGISTER
+require_once('assets/php/lang.php');
+
 $nameRegister = test_input($_POST['nameRegister'] ?? null);
 $emailRegister = test_input($_POST['emailRegister'] ?? null);
 $passwordRegister1 = test_input($_POST['passwordRegister1'] ?? null);
@@ -11,31 +12,26 @@ $erroresRegister = array();
 if (isset($_POST['submit'])) {
 
     //VALIDACION DEL NOMBRE
-    if (empty($nameRegister)) {
-        array_push($erroresRegister, 'Debe ingresar un nombre.');
+    if (strlen($nameRegister) < 3 || strlen($nameRegister) > 50 || !preg_match("/^[a-zA-Z ]*$/", $nameRegister) || empty($nameRegister)) {
+        array_push($erroresRegister, $lang['contacto_error_nombre']);
     }
 
     //VALIDACION DEL EMAIL
-    if (!filter_var($emailRegister, FILTER_VALIDATE_EMAIL)) {
-        array_push($erroresRegister, 'Debe ingresar un correo electronico válido.');
+    if (!filter_var($emailRegister, FILTER_VALIDATE_EMAIL) || strlen($emailRegister) < 5 || strlen($emailRegister) > 50 || empty($emailRegister)) {
+        array_push($erroresRegister, $lang['contacto_error_email']);
     }
 
     //VALIDACION DE LA CONTRASEÑA 1
-    if (empty($passwordRegister1)) {
-        array_push($erroresRegister, 'Debe ingresar una contraseña.');
+    if (empty($passwordRegister1) || strlen($passwordRegister1) < 5 || strlen($passwordRegister1) > 50) {
+        array_push($erroresRegister, $lang['login_error_password']);
     }
 
     //VALIDACION DE LA CONTRASEÑA 2
-    if (empty($passwordRegister2)) {
-        array_push($erroresRegister, 'Debe ingresar una contraseña.');
-    }
-
-    //VALIDACION DE CONTRASEÑAS
     if ($passwordRegister1 != $passwordRegister2) {
-        array_push($erroresRegister, 'Debe ingresar contraseñas iguales.');
+        array_push($erroresRegister, $lang['register_error_password']);
     }
 
-    //SI NO HAY ERRORES ME REDIRECCIONA
+    //SI NO HAY ERRORES TE REGISTRA
     if (count($erroresRegister) == 0) {
         header('Location: register.php');
     }

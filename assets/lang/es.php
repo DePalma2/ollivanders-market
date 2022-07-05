@@ -84,11 +84,17 @@ $lang = array(
     //REGISTER
     "register_titulo" => "Registro",
     "register_password_2" => "Repetir contraseña",
-    "register_btn" => "Registrarse",
+    "register_btn" => "Crear cuenta",
 
     //ERRORES
     "contacto_error_nombre" => "Debe ingresar un nombre correcto",
     "contacto_error_email" => "Debe ingresar un correo electronico válido",
     "contacto_error_mensaje" => "Debe ingresar un mensaje",
-    "contacto_error_envio" => "Por algún motivo no se envió el mensaje"
+    "contacto_error_envio" => "Por algún motivo no se envió el mensaje",
+    "login_error_password" => "You must enter a correct password",
+    "register_error_password" => "Las contraseñas no son iguales",
+
+    //REUTILIZADAS
+    "return_index" => "Para volver a la página principal haga",
+    "return_index_click" => "click aqui",
 );
