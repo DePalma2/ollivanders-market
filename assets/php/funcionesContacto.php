@@ -2,51 +2,61 @@
 
 require_once('assets/php/lang.php');
 
+//PHPMAILER
+require_once('assets/PHPMailer/src/PHPMailer.php');
+require_once('assets/PHPMailer/src/Exception.php');
+use PHPMailer\PHPMailer\PHPMailer;
+
 $name = test_input($_POST['name'] ?? null);
 $email = test_input($_POST['email'] ?? null);
 $msg = test_input($_POST['msg'] ?? null);
+
+//CONSTRUCCION DEL EMAIL
+$to = 'lukefeat123@gmail.com';
+$subject = 'Contacto desde la web';
+
+$body = <<<HTML
+    <h1>$subject</h1>
+    <p>De: $name $lastname / $email</p>
+    <p>Tel: $phone</p>
+    <h2>Mensaje</h2>
+    $msg
+HTML;
+
+$mailer = new PHPMailer();
+$mailer->setFrom($email, "$name $lastname");
+$mailer->addAddress($to);
+$mailer->Subject = $subject;
+$mailer->msgHTML($body);
+$mailer->AltBody = strip_tags($body);
+$mailer->CharSet = 'UTF-8';
 
 $errores = array();
 
 if (isset($_POST['submit'])) {
 
     //VALIDACION DEL NOMBRE
-    if (strlen($name) < 3 || strlen($name) > 50 || !preg_match("/^[a-zA-Z ]*$/", $name) || empty($name)) {
+    if (strlen($name) <= 2 || strlen($name) >= 20 || !preg_match("/^[a-zA-ZÀ-ÿ]*$/", $name) || empty($name)) {
         array_push($errores, $lang['contacto_error_nombre']);
     }
 
     //VALIDACION DEL EMAIL
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) < 5 || strlen($email) > 50 || empty($email)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) <= 4 || strlen($email) >= 40 || empty($email)) {
         array_push($errores, $lang['contacto_error_email']);
     }
 
     //VALIDACION DEL MENSAJE
-    if (strlen($msg) > 500 || empty($msg)) {
+    if (empty($msg)) {
         array_push($errores, $lang['contacto_error_mensaje']);
     }
 
     //SI NO HAY ERRORES ENVIA EL CORREO
     if (count($errores) == 0) {
-        $to = 'lukas.otero@davinci.edu.ar';
-        $subject = 'Contacto desde la web';
-
-        $message = <<<HTML
-            <h1>$subject</h1>
-            <p>De: $name / $email</p>
-            <h2>Mensaje</h2>
-            $msg
-        HTML;
-
-        $headers = "MIME-Version: 1.0 \r\n";
-        $headers .= "Content-type: text/html; charset=utf-8 \r\n";
-        $headers .= "From: $name <$email> \r\n";
-        //$headers .= "Bcc: lucas.palma@davinci.edu.ar \r\n";
-        //$headers .= "Bcc: tomas.ruiz@davinci.edu.ar \r\n";
-
-        $rta = mail($to, $subject, $message, $headers);
+        $rta = $mailer->send();
 
         if ($rta) {
             header('Location: contacto.php');
+            die();
         } else {
             array_push($errores, $lang['contacto_error_envio']);
         }

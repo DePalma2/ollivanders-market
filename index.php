@@ -1,7 +1,7 @@
 <?php require_once('assets/php/lang.php'); ?>
 
 <!DOCTYPE html>
-<html lang="<?php $idioma ?>">
+<html lang="es">
 
 <head>
     <!--=============== HEAD DEFAULT ===============-->
