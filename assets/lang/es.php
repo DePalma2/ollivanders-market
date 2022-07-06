@@ -91,7 +91,7 @@ $lang = array(
     "contacto_error_email" => "Debe ingresar un correo electronico válido",
     "contacto_error_mensaje" => "Debe ingresar un mensaje",
     "contacto_error_envio" => "Por algún motivo no se envió el mensaje",
-    "login_error_password" => "You must enter a correct password",
+    "login_error_password" => "Debes ingresar una contraseña correcta",
     "register_error_password" => "Las contraseñas no son iguales",
 
     //REUTILIZADAS

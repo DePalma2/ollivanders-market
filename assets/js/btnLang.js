@@ -36,6 +36,9 @@ function getIdioma() {
             btnPt.classList.add('active');
         } else if (localStorage.getItem('lang') === 'en') {
             btnEn.classList.add('active');
+        } else {
+            localStorage.setItem('lang', 'es');
+            btnEs.classList.add('active');
         }
     } else {
         localStorage.setItem('lang', 'es');
