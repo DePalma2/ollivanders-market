@@ -12,17 +12,17 @@ $erroresRegister = array();
 if (isset($_POST['submit'])) {
 
     //VALIDACION DEL NOMBRE
-    if (strlen($nameRegister) < 3 || strlen($nameRegister) > 50 || !preg_match("/^[a-zA-Z ]*$/", $nameRegister) || empty($nameRegister)) {
+    if (strlen($nameRegister) <= 2 || strlen($nameRegister) >= 51 || !preg_match("/^[a-zA-Z ]*$/", $nameRegister) || empty($nameRegister)) {
         array_push($erroresRegister, $lang['contacto_error_nombre']);
     }
 
     //VALIDACION DEL EMAIL
-    if (!filter_var($emailRegister, FILTER_VALIDATE_EMAIL) || strlen($emailRegister) < 5 || strlen($emailRegister) > 50 || empty($emailRegister)) {
+    if (!filter_var($emailRegister, FILTER_VALIDATE_EMAIL) || empty($emailRegister)) {
         array_push($erroresRegister, $lang['contacto_error_email']);
     }
 
     //VALIDACION DE LA CONTRASEÑA 1
-    if (empty($passwordRegister1) || strlen($passwordRegister1) < 5 || strlen($passwordRegister1) > 50) {
+    if (empty($passwordRegister1) || strlen($passwordRegister1) <= 3) {
         array_push($erroresRegister, $lang['login_error_password']);
     }
 

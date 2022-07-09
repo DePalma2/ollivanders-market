@@ -18,34 +18,13 @@
 </head>
 
 <body>
-    <header>
-        <nav class="flex">
-            <ul class="container-logo">
-                <li class="logo flex"><img src="assets/img/varios/logo.png"></li>
-                <li class="text-logo"><a href="index.php">Ollivander's</a></li>
-            </ul>
-
-            <!-- BOTON LANG -->
-            <div class="card">
-                <ul class="langButton">
-                    <li id="btnEs"><a href="?lang=es"><span class="fi fi-es"></span></a></li>
-                    <li id="btnPt"><a href="?lang=pt"><span class="fi fi-pt"></span></a></li>
-                    <li id="btnEn"><a href="?lang=en"><span class="fi fi-us"></span></a></li>
-                </ul>
-            </div>
-
-            <a href="register.php" class="d-block"><button
-                    class="btn-main"><?php echo $lang['register_btn']?></button></a>
-
-        </nav>
-    </header>
-
     <div class="container-form">
 
         <?php require_once('assets/php/dashboard/helpers/helper_input.php') ?>
         <?php require_once ('assets/php/funcionesLogin.php') ?>
 
-        <form class="contact-form px-5" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
+        <form class="contact-form px-5" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST"
+            enctype="multipart/form-data">
             <span class="contact-form-title"><?php echo $lang['header_iniciarSesion']?></span>
 
             <!-- ERRORES -->
@@ -59,7 +38,8 @@
                 <div class="col-sm-12 mb-3">
                     <label class="form-label">Email</label>
                     <input required type="text" name="emailLogin" autocomplete="off" class="form-control"
-                        placeholder="<?php echo $lang['contacto_placeholder_email']?>" value="<?php echo $emailLogin ?>">
+                        placeholder="<?php echo $lang['contacto_placeholder_email']?>"
+                        value="<?php echo $emailLogin ?>">
                 </div>
 
                 <div class="col-sm-12 mb-3">
@@ -77,9 +57,28 @@
                 </div>
             </div>
 
-            <div class="return-index">
+            <!-- BOTON LANG -->
+            <div class="flex">
+                <div class="card">
+                    <ul class="langButton">
+                        <li id="btnEs"><a href="?lang=es"><span class="fi fi-es"></span></a></li>
+                        <li id="btnPt"><a href="?lang=pt"><span class="fi fi-pt"></span></a></li>
+                        <li id="btnEn"><a href="?lang=en"><span class="fi fi-us"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="return">
+                <!-- IR AL LOGIN -->
+                <span class="text"><?php echo $lang['return_register']?>
+                    <a href="register.php" class="text"><?php echo $lang['return_click']?></a>
+                </span>
+
+                <br>
+                
+                <!-- IR AL INICIO -->
                 <span class="text"><?php echo $lang['return_index']?>
-                    <a href="index.php" class="text"><?php echo $lang['return_index_click']?></a>
+                    <a href="index.php" class="text"><?php echo $lang['return_click']?></a>
                 </span>
             </div>
         </form>

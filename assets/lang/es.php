@@ -94,7 +94,9 @@ $lang = array(
     "login_error_password" => "Debes ingresar una contraseña correcta",
     "register_error_password" => "Las contraseñas no son iguales",
 
-    //REUTILIZADAS
+    //RETURNS
+    "return_login" => "Para ingresar a tu cuenta",
+    "return_register" => "Para crear tu cuenta",
     "return_index" => "Para volver a la página principal haga",
-    "return_index_click" => "click aqui",
+    "return_click" => "click aqui",
 );

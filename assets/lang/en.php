@@ -3,7 +3,7 @@
 $lang = array(
 
     //HEADER
-    "header_iniciarSesion" => "Sing in",
+    "header_iniciarSesion" => "Sign in",
     "header_inicio" => "Home",
     "header_nosotros" => "About us",
     "header_productos" => "Products",
@@ -79,7 +79,7 @@ $lang = array(
 
     //LOGIN
     "login_password_1" => "Password",
-    "login_btn" => "Sing in",
+    "login_btn" => "Sign in",
 
     //REGISTER
     "register_titulo" => "Register",
@@ -94,7 +94,9 @@ $lang = array(
     "login_error_password" => "You must enter a correct password",
     "register_error_password" => "Passwords are not the same",
 
-    //REUTILIZADAS
+    //RETURNS
+    "return_login" => "To access your account",
+    "return_register" => "To create your account",
     "return_index" => "To return to the main page",
-    "return_index_click" => "click here",
+    "return_click" => "click here",
 );
