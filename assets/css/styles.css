@@ -223,31 +223,31 @@ nav {
   padding: 0;
 }
 
-.langButton li:nth-child(1).active ~ .selector {
+.langButton li:nth-child(1).active~.selector {
   left: 0;
   opacity: 1;
 }
 
-.langButton li:nth-child(2).active ~ .selector {
+.langButton li:nth-child(2).active~.selector {
   left: 70px;
   opacity: 1;
 }
 
-.langButton li:nth-child(3).active ~ .selector {
+.langButton li:nth-child(3).active~.selector {
   left: 140px;
   opacity: 1;
 }
 
 
 /*=============== BOTON HAMBURGUESA ===============*/
-.hamburger { 
+.hamburger {
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
 }
 
-.hamburger .line { 
+.hamburger .line {
   display: block;
   width: 40px;
   height: 3px;
@@ -258,14 +258,13 @@ nav {
   opacity: .25s;
 }
 
-.hamburger.active .line:nth-child(1) { 
-  transform: translateY(13px)
-  rotate(45deg);
-} 
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
 
 .hamburger.active .line:nth-child(2) {
   opacity: 0;
-} 
+}
 
 .hamburger.active .line:nth-child(3) {
   transform: translateY(-13px) rotate(-45deg);
@@ -745,6 +744,80 @@ button.btn-primary:hover::before {
 
 .nuevo__contenido:hover .nuevo__btn {
   right: 0;
+}
+
+/*=============== PRODUCTOS FILTRO ===============*/
+
+.container-filtro {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container-filtro .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.categoria-filtro {
+  margin-top: 40px;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+.title h1 {
+  color: orange;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.main-filtro { 
+  text-align: center;
+}
+
+.text-filtro button{
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.filtro-btn {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-block;
+  margin: 10px 30px;
+  position: relative;
+}
+
+.filtro-btn::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0;
+  background-color: #fff;
+  transition: all .2s ease-in-out;
+}
+
+.filtro-btn:hover::after{
+  width: 100%;
+}
+
+.active-btn-filtro { 
+  color: #fff;
+}
+
+.active-btn-filtro::after { 
+  width: 100%;
 }
 
 /*=============== FOOTER ===============*/
