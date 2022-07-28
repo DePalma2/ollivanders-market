@@ -54,7 +54,7 @@
             <ul class="container-btn-hamburguesa">
                 <li class="item btn-secondary"><a href="#home"><?php echo $lang['header_inicio']?></a></li>
                 <li class="item btn-secondary"><a href="#aboutUs"><?php echo $lang['header_nosotros']?></a></li>
-                <li class="item btn-secondary"><a href="#product"><?php echo $lang['header_productos']?></a></li>
+                <li class="item btn-secondary"><a href="productos_home.php"><?php echo $lang['header_productos']?></a></li>
                 <li class="item btn-secondary"><a href="contacto.php"><?php echo $lang['header_contacto']?></a></li>
                 <a href="login.php" class="d-block"><button class="item btn-primary"><?php echo $lang['header_iniciarSesion']?></button></a>
             </ul>
