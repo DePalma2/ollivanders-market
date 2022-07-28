@@ -3,7 +3,7 @@
 $lang = array(
 
     //HEADER
-    "header_iniciarSesion" => "Log in",
+    "header_iniciarSesion" => "Sing in",
     "header_inicio" => "Home",
     "header_nosotros" => "About us",
     "header_productos" => "Products",
@@ -74,13 +74,27 @@ $lang = array(
     "contacto_nombre" => "Name",
     "contacto_mensaje" => "Message",
     "contacto_btn" => "Submit",
+    "contacto_placeholder_email" => "email@example.com",
+    "contacto_placeholder_mensaje" => "Leave us your message",
 
     //LOGIN
     "login_password_1" => "Password",
-    "login_btn" => "Login",
+    "login_btn" => "Sing in",
 
     //REGISTER
     "register_titulo" => "Register",
     "register_password_2" => "Repeat password",
-    "register_btn" => "Check in"
+    "register_btn" => "Create account",
+
+    //ERRORES
+    "contacto_error_nombre" => "You must enter a correct name",
+    "contacto_error_email" => "You must enter a valid email",
+    "contacto_error_mensaje" => "You must enter a message",
+    "contacto_error_envio" => "For some reason the message was not sent",
+    "login_error_password" => "You must enter a correct password",
+    "register_error_password" => "Passwords are not the same",
+
+    //REUTILIZADAS
+    "return_index" => "To return to the main page",
+    "return_index_click" => "click here",
 );

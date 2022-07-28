@@ -4,7 +4,7 @@ $lang = array(
 
     //HEADER
     "header_iniciarSesion" => "Iniciar sessão",
-    "header_inicio" => "Começar",
+    "header_inicio" => "Início",
     "header_nosotros" => "Nós",
     "header_productos" => "Produtos",
     "header_contacto" => "Contato",
@@ -74,6 +74,8 @@ $lang = array(
     "contacto_nombre" => "Nome",
     "contacto_mensaje" => "Mensagem",
     "contacto_btn" => "Mandar",
+    "contacto_placeholder_email" => "email@exemplo.com.ar",
+    "contacto_placeholder_mensaje" => "Deixe-nos a sua mensagem",
 
     //LOGIN
     "login_password_1" => "Senha",
@@ -82,5 +84,17 @@ $lang = array(
     //REGISTER
     "register_titulo" => "Registro",
     "register_password_2" => "Repetir a senha",
-    "register_btn" => "Check-in"
+    "register_btn" => "Criar conta",
+
+    //ERRORES
+    "contacto_error_nombre" => "Você deve inserir um nome correto",
+    "contacto_error_email" => "Você deve inserir um e-mail válido",
+    "contacto_error_mensaje" => "Você deve digitar uma mensagem",
+    "contacto_error_envio" => "Por algum motivo a mensagem não foi enviada",
+    "login_error_password" => "Você deve digitar uma senha correta",
+    "register_error_password" => "Senhas nao sao as mesmas",
+
+    //REUTILIZADAS
+    "return_index" => "Para voltar à página principal",
+    "return_index_click" => "clique aqui",
 );

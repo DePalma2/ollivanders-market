@@ -1,7 +1,7 @@
 <?php require_once('assets/php/lang.php'); ?>
 
 <!DOCTYPE html>
-<html lang="<?php $idioma ?>">
+<html lang="es">
 
 <head>
     <!--=============== HEAD DEFAULT ===============-->
@@ -27,19 +27,20 @@
 <body>
     <!--==================== HEADER ====================-->
     <header>
-        <nav class="flex">
+        <nav class="flex-column">
             <ul class="container-logo">
                 <li class="logo flex"><img src="assets/img/varios/logo.png"></li>
                 <li class="text-logo"><a href="index.php">Ollivander's</a></li>
             </ul>
 
             <!-- BOTON LANG -->
-            <ul class="langButton">
-                <li><a href="?lang=es"><span class="fi fi-es"></span></a></li>
-                <li><a href="?lang=pt"><span class="fi fi-pt"></span></a></li>
-                <li><a href="?lang=en"><span class="fi fi-us"></span></a></li>
-                <li class="selector"></li>
-            </ul>
+            <div class="card">
+                <ul class="langButton">
+                    <li id="btnEs"><a href="?lang=es"><span class="fi fi-es"></span></a></li>
+                    <li id="btnPt"><a href="?lang=pt"><span class="fi fi-pt"></span></a></li>
+                    <li id="btnEn"><a href="?lang=en"><span class="fi fi-us"></span></a></li>
+                </ul>
+            </div>
 
             <a href="login.php" class="d-none"><button class="btn-primary"><?php echo $lang['header_iniciarSesion']?></button></a>
             <div class="btn-hamburguesa">
@@ -506,6 +507,9 @@
 
     <!--=============== LOCAL JS ===============-->
     <script src="assets/js/index.js"></script>
+
+    <!--=============== GLOBAL JS ===============-->
+    <script src="assets/js/btnLang.js"></script>
 </body>
 
 </html>

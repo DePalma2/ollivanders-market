@@ -1,6 +1,6 @@
 <?php
 
-$flag = false;
+require_once('assets/php/lang.php');
 
 //LOGIN
 $emailLogin = test_input($_POST['emailLogin'] ?? null);
@@ -11,23 +11,17 @@ $erroresLogin = array();
 if (isset($_POST['submit'])) {
 
     //VALIDACION DEL EMAIL
-    if (!filter_var($emailLogin, FILTER_VALIDATE_EMAIL)) {
-        array_push($erroresLogin, 'Debe ingresar un correo electronico válido.');
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) < 5 || strlen($email) > 50 || empty($email)) {
+        array_push($errores, $lang['contacto_error_email']);
     }
 
     //VALIDACION DE LA CONTRASEÑA
-    if (empty($passwordLogin)) {
-        array_push($erroresLogin, 'Debe ingresar una contraseña.');
+    if (empty($passwordLogin) || strlen($passwordLogin) < 5 || strlen($passwordLogin) > 50) {
+        array_push($erroresLogin, $lang['login_error_password']);
     }
 
     //VALIDACION DE ADMINISTRADOR
-    if ($emailLogin === 'admin@admin.com' && $passwordLogin === 'admin') {
+    if (count($erroresLogin) == 0) {
         header('Location: ../assets/php/dashboard/productos.php');
-        $flag = true;
-    }
-
-    //SI NO HAY ERRORES ME REDIRECCIONA
-    if (count($erroresLogin) == 0 && $flag == false) {
-        header('Location: login.php');
     }
 }

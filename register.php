@@ -1,7 +1,7 @@
 <?php require_once('assets/php/lang.php'); ?>
 
 <!DOCTYPE html>
-<html lang="<?php $idioma ?>">
+<html lang="es">
 
 <head>
     <!--=============== HEAD DEFAULT ===============-->
@@ -10,79 +10,100 @@
     <!--=============== ICONS ===============-->
     <?php require_once('assets/php/dashboard/views/_icons.php'); ?>
 
-    <!--=============== CSS ===============-->
-   <?php require_once('assets/php/dashboard/views/_cssContacto.php'); ?>
+    <!--=============== BOOTSTRAP ===============-->
+    <?php require_once('assets/php/dashboard/views/_bootstrap.php'); ?>
 
-    <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--=============== CSS ===============-->
+    <?php require_once('assets/php/dashboard/views/_cssContacto.php'); ?>
 </head>
 
 <body>
-<div class="bg-form">
-        <!--==================== REGISTER ====================-->
-        <div class="container-form">
-            <form class="contact-form" action="register.php" method="POST">
-                <span class="contact-form-title"><?php echo $lang['register_titulo']?></span>
+    <header>
+        <nav class="flex">
+            <ul class="container-logo">
+                <li class="logo flex"><img src="assets/img/varios/logo.png"></li>
+                <li class="text-logo"><a href="index.php">Ollivander's</a></li>
+            </ul>
 
-                <!-- ERRORES -->
-                <ul class="flex">
-                    <?php require_once('assets/php/dashboard/helpers/helper_input.php') ?>
-                    <?php require_once ('assets/php/funcionesRegister.php') ?>
-                    <?php foreach ($erroresRegister  as $error) : ?>
-                    <li class="error"><?php echo $error ?></li>
-                    <?php endforeach ?>
+            <!-- BOTON LANG -->
+            <div class="card">
+                <ul class="langButton">
+                    <li id="btnEs"><a href="?lang=es"><span class="fi fi-es"></span></a></li>
+                    <li id="btnPt"><a href="?lang=pt"><span class="fi fi-pt"></span></a></li>
+                    <li id="btnEn"><a href="?lang=en"><span class="fi fi-us"></span></a></li>
                 </ul>
+            </div>
 
-                <div class="container-inputs">
+            <a href="login.php" class="d-block"><button
+                    class="btn-main"><?php echo $lang['header_iniciarSesion']?></button></a>
 
-                <div class="input-group">
-                        <input required type="text" name="nameRegister" autocomplete="off" class="input"
-                            value="<?php echo $nameRegister ?>">
-                        <label class="user-label"><?php echo $lang['contacto_nombre']?></label>
-                    </div>
+        </nav>
+    </header>
 
-                    <div class="input-group">
-                        <input required type="email" name="emailRegister" autocomplete="off" class="input"
-                            value="<?php echo $emailRegister  ?>">
-                        <label class="user-label">Email</label>
-                    </div>
-                    
-                    <div class="input-group">
-                        <input required type="password" name="passwordRegister1" autocomplete="off" class="input"
-                            value="<?php echo $passwordRegister1 ?>">
-                        <label class="user-label"><?php echo $lang['login_password_1']?></label>
-                    </div>
+    <div class="container-form">
 
-                    <div class="input-group">
-                        <input required type="password" name="passwordRegister2" autocomplete="off" class="input"
-                            value="<?php echo $passwordRegister2 ?>">
-                        <label class="user-label"><?php echo $lang['register_password_2']?></label>
-                    </div>
+        <?php require_once('assets/php/dashboard/helpers/helper_input.php') ?>
+        <?php require_once ('assets/php/funcionesRegister.php') ?>
 
+        <form class="contact-form px-5" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST"
+            enctype="multipart/form-data">
+            <span class="contact-form-title"><?php echo $lang['register_titulo']?></span>
+
+            <!-- ERRORES -->
+            <ul class="flex">
+                <?php foreach ($erroresRegister  as $error) : ?>
+                <li class="error"><?php echo $error ?></li>
+                <?php endforeach ?>
+            </ul>
+
+            <div class="container-inputs">
+                <div class="col-sm-12 mb-3">
+                    <label class="form-label"><?php echo $lang['contacto_nombre']?></label>
+                    <input required type="text" name="nameRegister" autocomplete="off" class="form-control"
+                        value="<?php echo $nameRegister ?>">
                 </div>
 
-                <div class="container-contact-form-btn">
-                    <div class="wrap-contact-form-btn">
-                        <div class="contact-form-bgbtn"></div>
-                        <button name="submit" class="contact-form-btn"><?php echo $lang['register_btn']?></button>
-                    </div>
+                <div class="col-sm-12 mb-3">
+                    <label class="form-label">Email</label>
+                    <input required type="text" name="emailRegister" autocomplete="off" class="form-control"
+                        placeholder="<?php echo $lang['contacto_placeholder_email']?>"
+                        value="<?php echo $emailRegister ?>">
                 </div>
 
-                <div class="return-index">
-                    <span class="text">Para volver a la pagina principal haga
-                        <a href="index.php" class="text">click aqui</a>
-                    </span>
-                    <br>
-                    <span class="text">Si ya tiene una cuenta puede ingresar haciendo
-                        <a href="login.php" class="text">click aqui</a>
-                    </span>
+                <div class="col-sm-12 mb-3">
+                    <label class="form-label"><?php echo $lang['login_password_1']?></label>
+                    <input required type="password" name="passwordRegister1" autocomplete="off" class="form-control"
+                        value="<?php echo $passwordRegister1 ?>">
                 </div>
-            </form>
-        </div>
+
+                <div class="col-sm-12 mb-3">
+                    <label class="form-label"><?php echo $lang['register_password_2']?></label>
+                    <input required type="password" name="passwordRegister2" autocomplete="off" class="form-control"
+                        value="<?php echo $passwordRegister2 ?>">
+                </div>
+
+            </div>
+
+            <div class="container-contact-form-btn">
+                <div class="wrap-contact-form-btn">
+                    <div class="contact-form-bgbtn"></div>
+                    <button name="submit" class="contact-form-btn"><?php echo $lang['register_btn']?></button>
+                </div>
+            </div>
+
+            <div class="return-index">
+                <span class="text"><?php echo $lang['return_index']?>
+                    <a href="index.php" class="text"><?php echo $lang['return_index_click']?></a>
+                </span>
+            </div>
+        </form>
     </div>
 
-    <!--=============== MAIN JS ===============-->
+    <!--=============== LOCAL JS ===============-->
     <script src="assets/js/login.js"></script>
+
+    <!--=============== GLOBAL JS ===============-->
+    <script src="assets/js/btnLang.js"></script>
 </body>
 
 </html>
