@@ -1,10 +1,10 @@
 # Ollivander's Market
 
 ## Funcionalidades:
-- [ ] Que el administrador pueda ver y eliminar otros usuarios -> Tomi
-- [ ] Loggin -> Tomi
-- [ ] Register -> Tomi
-- [ ] Cambio de diseño -> Lucas
+- [ ] Que el administrador pueda ver y eliminar otros usuarios
+- [ ] Loggin
+- [ ] Register
+- [X] Cambio de diseño
 - [X] Backend para el envío del email
 - [X] Traducciones
 - [X] Filtros para las publicaciones
