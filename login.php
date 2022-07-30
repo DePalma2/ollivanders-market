@@ -1,7 +1,18 @@
-<?php require_once('assets/php/lang.php'); ?>
+<?php require_once('assets/php/lang.php'); 
+
+require_once('_autoload.php');
+
+if(!Auth::validate())
+{
+    header('Location: login.php');
+}
+
+$nombre = Auth::getNombre();
+
+?>
 
 <!DOCTYPE html>
-<html lang="<?php $idioma ?>">
+<html lang="es">
 
 <head>
     <!--=============== HEAD DEFAULT ===============-->
@@ -75,7 +86,7 @@
                 </span>
 
                 <br>
-                
+
                 <!-- IR AL INICIO -->
                 <span class="text"><?php echo $lang['return_index']?>
                     <a href="index.php" class="text"><?php echo $lang['return_click']?></a>
