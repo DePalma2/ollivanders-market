@@ -298,8 +298,12 @@
         <img src="assets/img/personajes/voldemort.png" class="footer__voldemort">
     </footer>
 
+    <!--=============== LOCAL JS ===============-->
     <script src="assets/js/index.js"></script>
     <script src="assets/js/filtro.js"></script>
+
+    <!--=============== GLOBAL JS ===============-->
+    <script src="assets/js/btnLang.js"></script>
 </body>
 
 </html>
