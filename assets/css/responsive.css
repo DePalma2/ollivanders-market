@@ -6,13 +6,12 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.2rem;
     --normal-font-size: 1rem;
-    --small-font-size: .8rem;
-    --smaller-font-size: .7rem;
+    --small-font-size: 0.8rem;
+    --smaller-font-size: 0.7rem;
   }
 }
 
 @media (min-width: 368px) {
-
   /*===============  CASAS ===============*/
   .hufflepuff-fix {
     margin: 0;
@@ -21,7 +20,6 @@
 
 /* PARA 'MOBILE M' EN ADELANTE */
 @media (min-width: 375px) {
-
   /*===============  HOME ===============*/
   .home__grupo {
     justify-content: center;
@@ -36,7 +34,6 @@
 
 /* PARA 'MOBILE L' EN ADELANTE */
 @media (min-width: 425px) {
-
   /*=============== NAVBAR ===============*/
   nav {
     flex-direction: row;
@@ -59,7 +56,6 @@
 
 /* PARA 'TABLET M' EN ADELANTE*/
 @media (min-width: 576px) {
-
   /*===============  NAVBAR ===============*/
   nav.flex-column {
     flex-direction: row;
@@ -104,15 +100,14 @@
 }
 
 @media (min-width: 720px) {
+  /*=============== NAVBAR ===============*/
+  .d-none {
+    display: block;
+  }
 
-    /*=============== NAVBAR ===============*/
-    .d-none {
-      display: block;
-    }
-  
-    .d-block {
-      display: none;
-    }
+  .d-block {
+    display: none;
+  }
 
   /*=============== HOME ===============*/
   .home__btns {
@@ -132,11 +127,35 @@
   .about__img {
     width: 250px;
   }
+
+  /*=============== FOOTER ===============*/
+  .footer__container {
+    flex-direction: row;
+  }
+
+  .footer__container {
+    row-gap: 2rem;
+  }
+
+  .footer__contenido {
+    margin: 0 2rem;
+  }
+
+  .footer__dumbledore {
+    width: 130px;
+    top: 0;
+    right: -67px;
+  }
+
+  .footer__voldemort {
+    width: 130px;
+    top: 180px;
+    right: -67px;
+  }
 }
 
 /* PARA 'TABLET L' EN ADELANTE */
 @media (min-width: 768px) {
-
   /*=============== CLASES GLOBALES ===============*/
   .section {
     padding: 5rem 0 2rem;
@@ -169,7 +188,7 @@
   }
 
   .casas__data {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
   }
 
   /*=============== DESCUENTOS ===============*/
@@ -177,35 +196,14 @@
     width: 325px;
   }
 
-  /*=============== FOOTER ===============*/
-  .footer__container {
-    flex-direction: row;
-  }
-
-  .footer__container {
-    row-gap: 0;
-  }
-
-  .footer__contenido {
-    margin: 0 2rem;
-  }
-
-  .footer__dumbledore {
-    width: 130px;
-    top: 0;
-    right: -67px;
-  }
-
-  .footer__voldemort {
-    width: 130px;
-    top: 180px;
-    right: -67px;
+  /*=============== PRODUCTOS ===============*/
+  #product {
+    padding: 0 0 3rem;
   }
 }
 
 /* PARA 'LAPTOP M' EN ADELANTE */
 @media (min-width: 950px) {
-
   /*=============== NAVBAR ===============*/
   .container-btn-hamburguesa {
     flex-direction: row;
@@ -238,11 +236,27 @@
   .home__detalles-img {
     right: 16rem;
   }
+
+  /*=============== FOOTER ===============*/
+  .footer .flex-column {
+    justify-content: space-around;
+  }
+
+  .footer__dumbledore {
+    width: 180px;
+    top: 15px;
+    right: -94px;
+  }
+
+  .footer__voldemort {
+    width: 180px;
+    top: 25px;
+    left: -83px;
+  }
 }
 
 /* PARA 'LAPTOP M' */
 @media (min-width: 992px) {
-
   /*=============== CLASES GLOBALES ===============*/
   .container {
     margin-left: auto;
@@ -299,7 +313,6 @@
 
 /* PARA 'LAPTOP' EN ADELANTE */
 @media (min-width: 1024px) {
-
   /*=============== HOME ===============*/
   .home__detalles-img {
     right: 19rem;
@@ -317,24 +330,10 @@
   textarea {
     height: 100px;
   }
-
-  /*=============== FOOTER ===============*/
-  .footer__dumbledore {
-    width: 180px;
-    top: 15px;
-    right: -94px;
-  }
-
-  .footer__voldemort {
-    width: 180px;
-    top: 25px;
-    left: -83px;
-  }
 }
 
 /* PARA 'LAPTOP +' EN ADELANTE */
 @media (min-width: 1200px) {
-
   /*=============== HOME ===============*/
   .swiper-pagination {
     margin-top: 2.5rem;

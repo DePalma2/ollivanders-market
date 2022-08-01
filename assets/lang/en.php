@@ -14,6 +14,11 @@ $lang = array(
     "categoria_2" => "Accessories",
     "categoria_3" => "Books",
 
+    //FILTROS
+    "filtro_todos" => "All",
+    "filtro_varitas" => "Wands",
+    "filtro_tunicas" => "Robes",
+
     //SLIDER 1
     "slider1_titulo" => "The most sold",
     "slider1_subtitulo" => "Gryffindor<br>scarf",

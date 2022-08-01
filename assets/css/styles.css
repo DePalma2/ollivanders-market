@@ -125,7 +125,6 @@ nav {
 
 /*=============== CLASES REUSABLES ===============*/
 
-
 .section__titulo {
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-1);
@@ -829,7 +828,7 @@ button.btn-primary:hover::before {
 
 /*=============== FOOTER ===============*/
 .footer.section {
-  padding-bottom: 2rem;
+  padding: 4rem 1rem 2rem;
 }
 
 .footer {
@@ -839,6 +838,7 @@ button.btn-primary:hover::before {
 
 .footer .flex-column {
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .footer__dumbledore,

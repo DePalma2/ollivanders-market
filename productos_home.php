@@ -55,8 +55,9 @@
 
             <ul class="container-btn-hamburguesa">
                 <li class="item btn-secondary"><a href="index.php"><?php echo $lang['header_inicio']?></a></li>
-                <li class="item btn-secondary"><a href="index.php"><?php echo $lang['header_nosotros']?></a></li>
-                <li class="item btn-secondary"><a href="#productos_home.php"><?php echo $lang['header_productos']?></a>
+                <li class="item btn-secondary"><a href="index.php/#aboutUs"><?php echo $lang['header_nosotros']?></a>
+                </li>
+                <li class="item btn-secondary"><a href="productos_home.php"><?php echo $lang['header_productos']?></a>
                 </li>
                 <li class="item btn-secondary"><a href="contacto.php"><?php echo $lang['header_contacto']?></a></li>
                 <a href="login.php" class="d-block"><button
@@ -66,7 +67,6 @@
     </header>
 
     <!-- Filtros -->
-
     <div class="container-filtro">
         <div class="categoria-filtro">
             <div class="container">
@@ -74,25 +74,22 @@
                     <h2 class="section__titulo"><?php echo $lang['productos_titulo']?></h2>
                 </div>
                 <div class="main-filtro">
-                    <span class="text-filtro"><button type="button" class="filtro-btn " id="todos">Todos</button></span>
+                    <span class="text-filtro"><button type="button" class="filtro-btn "
+                            id="todos"><?php echo $lang['filtro_todos']?></button></span>
                     <span class="text-filtro"><button type="button" class="filtro-btn"
-                            id="varitas">Varitas</button></span>
+                            id="varitas"><?php echo $lang['filtro_varitas']?></button></span>
                     <span class="text-filtro"><button type="button" class="filtro-btn"
-                            id="libros">libros</button></span>
+                            id="libros"><?php echo $lang['categoria_3']?></button></span>
                     <span class="text-filtro"><button type="button" class="filtro-btn"
-                            id="accesorios">Accesorios</button></span>
+                            id="accesorios"><?php echo $lang['categoria_2']?></button></span>
                     <span class="text-filtro"><button type="button" class="filtro-btn"
-                            id="tunicas">Tunicas</button></span>
+                            id="tunicas"><?php echo $lang['filtro_tunicas']?></button></span>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
     <!-- Productos -->
-
     <section class="section" id="product">
         <div class="container flex">
 
@@ -245,12 +242,64 @@
                     <i class="bx bx-cart-alt product__icon"></i>
                 </button>
             </div>
-
-
         </div>
     </section>
-    <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/filtro.js"></script>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container flex-column">
+            <div class="footer__contenido">
+                <a href="#" class="footer__logo">
+                    <img src="assets/img/varios/logo.png" class="footer__logo-img">
+                    Ollivander's Market
+                </a>
+
+                <p class="footer__descripcion"><?php echo $lang['footer_descripcion']?></p>
+
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-instagram-alt"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__contenido">
+                <h3 class="footer__titulo"><?php echo $lang['footer_titulo_2']?></h3>
+
+                <ul class="footer__links">
+                    <li><a href="#aboutUs" class="footer__link"><?php echo $lang['header_nosotros']?></a></li>
+                    <li><a href="#casas" class="footer__link"><?php echo $lang['footer_link_2']?> Hogwarts</a></li>
+                    <li><a href="#nuevo" class="footer__link"><?php echo $lang['nuevo_titulo']?></a></li>
+                    <li><a href="login.php" class="footer__link"><?php echo $lang['footer_link_4']?> Hogwarts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__contenido">
+                <h3 class="footer__titulo"><?php echo $lang['footer_titulo_3']?></h3>
+
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link"><?php echo $lang['footer_link_5']?></a></li>
+                    <li><a href="#" class="footer__link"><?php echo $lang['footer_link_6']?></a></li>
+                    <li><a href="#" class="footer__link"><?php echo $lang['footer_link_7']?></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer__copy">&#169; Lucas De Palma, Tomas Ruiz y Lukas Otero.
+            <?php echo $lang['footer_copy']?>.</span>
+
+        <img src="assets/img/personajes/dumbledore.png" class="footer__dumbledore">
+        <img src="assets/img/personajes/voldemort.png" class="footer__voldemort">
+    </footer>
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/filtro.js"></script>
 </body>
 
 </html>

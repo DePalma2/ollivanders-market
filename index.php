@@ -42,7 +42,8 @@
                 </ul>
             </div>
 
-            <a href="login.php" class="d-none"><button class="btn-primary"><?php echo $lang['header_iniciarSesion']?></button></a>
+            <a href="login.php" class="d-none"><button
+                    class="btn-primary"><?php echo $lang['header_iniciarSesion']?></button></a>
             <div class="btn-hamburguesa">
                 <button type="button" class="hamburger">
                     <span class="line"></span>
@@ -52,11 +53,13 @@
             </div>
 
             <ul class="container-btn-hamburguesa">
-                <li class="item btn-secondary"><a href="#home"><?php echo $lang['header_inicio']?></a></li>
+                <li class="item btn-secondary"><a href="index.php"><?php echo $lang['header_inicio']?></a></li>
                 <li class="item btn-secondary"><a href="#aboutUs"><?php echo $lang['header_nosotros']?></a></li>
-                <li class="item btn-secondary"><a href="productos_home.php"><?php echo $lang['header_productos']?></a></li>
+                <li class="item btn-secondary"><a href="productos_home.php"><?php echo $lang['header_productos']?></a>
+                </li>
                 <li class="item btn-secondary"><a href="contacto.php"><?php echo $lang['header_contacto']?></a></li>
-                <a href="login.php" class="d-block"><button class="item btn-primary"><?php echo $lang['header_iniciarSesion']?></button></a>
+                <a href="login.php" class="d-block"><button
+                        class="item btn-primary"><?php echo $lang['header_iniciarSesion']?></button></a>
             </ul>
         </nav>
     </header>
@@ -87,7 +90,8 @@
 
                             <div class="home__btns">
                                 <a href="#" class="btn"><?php echo $lang['slider1_btn_1']?></a>
-                                <a href="#" class="btn--link btn--flex"><?php echo $lang['slider1_btn_2']?><i class="bx bx-right-arrow-alt btn__icon"></i></a>
+                                <a href="#" class="btn--link btn--flex"><?php echo $lang['slider1_btn_2']?><i
+                                        class="bx bx-right-arrow-alt btn__icon"></i></a>
                             </div>
                         </div>
                     </section>
@@ -113,7 +117,8 @@
 
                             <div class="home__btns">
                                 <a href="#" class="btn"><?php echo $lang['slider1_btn_1']?></a>
-                                <a href="#" class="btn--link btn--flex"><?php echo $lang['slider2_btn_2']?><i class="bx bx-right-arrow-alt btn__icon"></i></a>
+                                <a href="#" class="btn--link btn--flex"><?php echo $lang['slider2_btn_2']?><i
+                                        class="bx bx-right-arrow-alt btn__icon"></i></a>
                             </div>
                         </div>
 
@@ -135,12 +140,13 @@
                             <div class="home__data">
                                 <h3 class="home__subtitulo"><?php echo $lang['slider1_titulo']?></h3>
                                 <h1 class="home__titulo"><?php echo $lang['slider3_subtitulo']?><h1>
-                                <p class="home__descripcion"><?php echo $lang['slider3_descripcion']?></p>
+                                        <p class="home__descripcion"><?php echo $lang['slider3_descripcion']?></p>
                             </div>
 
                             <div class="home__btns">
                                 <a href="#" class="btn"><?php echo $lang['slider1_btn_1']?></a>
-                                <a href="#" class="btn--link btn--flex"><?php echo $lang['slider3_btn_2']?><i class="bx bx-right-arrow-alt btn__icon"></i></a>
+                                <a href="#" class="btn--link btn--flex"><?php echo $lang['slider3_btn_2']?><i
+                                        class="bx bx-right-arrow-alt btn__icon"></i></a>
                             </div>
                         </div>
                     </section>
@@ -480,7 +486,8 @@
             </div>
         </div>
 
-        <span class="footer__copy">&#169; Lucas De Palma, Tomas Ruiz y Lukas Otero. <?php echo $lang['footer_copy']?>.</span>
+        <span class="footer__copy">&#169; Lucas De Palma, Tomas Ruiz y Lukas Otero.
+            <?php echo $lang['footer_copy']?>.</span>
 
         <img src="assets/img/personajes/dumbledore.png" class="footer__dumbledore">
         <img src="assets/img/personajes/voldemort.png" class="footer__voldemort">
