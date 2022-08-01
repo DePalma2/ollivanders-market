@@ -705,7 +705,7 @@ button.btn-primary:hover::before {
 .nuevo__titulo {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
-  overflow-wrap: normal;
+  overflow: hidden;
 }
 
 .nuevo__subtitulo {

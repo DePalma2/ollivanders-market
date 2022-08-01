@@ -57,7 +57,7 @@ $lang = array(
     "nuevo_producto_3_rav" => "Túnica de Ravenclaw",
     "nuevo_producto_4" => "Saga completa de Libros",
     "nuevo_producto_5" => "Harry Potter y la Orden del Fénix",
-    "nuevo_producto_6" => "Harry Potter y el misterio del príncipe",
+    "nuevo_producto_6" => "Harry Potter y el misterio del",
 
     //FOOTER
     "footer_descripcion" => "Adentrate en el mundo de la <b>Magia</b>",
