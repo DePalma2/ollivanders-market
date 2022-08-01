@@ -56,8 +56,8 @@ $lang = array(
     "nuevo_producto_3_sly" => "Slytherin robe",
     "nuevo_producto_3_rav" => "Ravenclaw robe",
     "nuevo_producto_4" => "Complete series of books",
-    "nuevo_producto_5" => "Harry Potter and the Order of the Phoenix",
-    "nuevo_producto_6" => "Harry Potter and the Half-Blood Prince",
+    "nuevo_producto_5" => "Harry Potter Book",
+    "nuevo_producto_6" => "Harry Potter Book",
 
     //FOOTER
     "footer_descripcion" => "Step into the <b>Magical</b> World",

@@ -56,8 +56,8 @@ $lang = array(
     "nuevo_producto_3_sly" => "Manto da Slytherin",
     "nuevo_producto_3_rav" => "Manto da Ravenclaw",
     "nuevo_producto_4" => "Série completa de livros",
-    "nuevo_producto_5" => "Harry Potter e a Ordem da Fênix",
-    "nuevo_producto_6" => "Harry Potter e o Príncipe Misterioso",
+    "nuevo_producto_5" => "Harry Potter livro",
+    "nuevo_producto_6" => "Harry Potter livro",
 
     //FOOTER
     "footer_descripcion" => "Entre no mundo da <b>Magia</b>",

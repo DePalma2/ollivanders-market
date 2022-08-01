@@ -124,9 +124,7 @@ nav {
 }
 
 /*=============== CLASES REUSABLES ===============*/
-.section {
-  padding: 4rem 0;
-}
+
 
 .section__titulo {
   font-size: var(--h1-font-size);
@@ -707,6 +705,7 @@ button.btn-primary:hover::before {
 .nuevo__titulo {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+  overflow-wrap: normal;
 }
 
 .nuevo__subtitulo {

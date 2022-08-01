@@ -1,7 +1,7 @@
 <?php require_once('assets/php/lang.php'); ?>
 
 <!DOCTYPE html>
-<html lang="<?php $idioma ?>">
+<html lang="es">
 
 <head>
     <!--=============== HEAD DEFAULT ===============-->
@@ -54,9 +54,9 @@
             </div>
 
             <ul class="container-btn-hamburguesa">
-                <li class="item btn-secondary"><a href="#home"><?php echo $lang['header_inicio']?></a></li>
-                <li class="item btn-secondary"><a href="#aboutUs"><?php echo $lang['header_nosotros']?></a></li>
-                <li class="item btn-secondary"><a href="productos_home.php"><?php echo $lang['header_productos']?></a>
+                <li class="item btn-secondary"><a href="index.php"><?php echo $lang['header_inicio']?></a></li>
+                <li class="item btn-secondary"><a href="index.php"><?php echo $lang['header_nosotros']?></a></li>
+                <li class="item btn-secondary"><a href="#productos_home.php"><?php echo $lang['header_productos']?></a>
                 </li>
                 <li class="item btn-secondary"><a href="contacto.php"><?php echo $lang['header_contacto']?></a></li>
                 <a href="login.php" class="d-block"><button
@@ -83,14 +83,6 @@
                             id="accesorios">Accesorios</button></span>
                     <span class="text-filtro"><button type="button" class="filtro-btn"
                             id="tunicas">Tunicas</button></span>
-                    <!-- <span class="text-filtro"><button type="button" class="filtro-btn"
-                            id="gryffindor">Gryffindor</button></span>
-                    <span class="text-filtro"><button type="button" class="filtro-btn"
-                            id="hufflepuff">Hufflepuff</button></span>
-                    <span class="text-filtro"><button type="button" class="filtro-btn"
-                            id="slytherin">Slytherin</button></span>
-                    <span class="text-filtro"><button type="button" class="filtro-btn"
-                            id="ravenclaw">Ravenclaw</button></span> -->
                 </div>
             </div>
         </div>
