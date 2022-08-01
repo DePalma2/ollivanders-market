@@ -28,19 +28,20 @@
 <body>
     <!--==================== HEADER ====================-->
     <header>
-        <nav class="flex">
+        <nav class="flex-column">
             <ul class="container-logo">
                 <li class="logo flex"><img src="assets/img/varios/logo.png"></li>
                 <li class="text-logo"><a href="index.php">Ollivander's</a></li>
             </ul>
 
             <!-- BOTON LANG -->
-            <ul class="langButton">
-                <li><a href="?lang=es"><span class="fi fi-es"></span></a></li>
-                <li><a href="?lang=pt"><span class="fi fi-pt"></span></a></li>
-                <li><a href="?lang=en"><span class="fi fi-us"></span></a></li>
-                <li class="selector"></li>
-            </ul>
+            <div class="card">
+                <ul class="langButton">
+                    <li id="btnEs"><a href="?lang=es"><span class="fi fi-es"></span></a></li>
+                    <li id="btnPt"><a href="?lang=pt"><span class="fi fi-pt"></span></a></li>
+                    <li id="btnEn"><a href="?lang=en"><span class="fi fi-us"></span></a></li>
+                </ul>
+            </div>
 
             <a href="login.php" class="d-none"><button
                     class="btn-primary"><?php echo $lang['header_iniciarSesion']?></button></a>
@@ -55,7 +56,8 @@
             <ul class="container-btn-hamburguesa">
                 <li class="item btn-secondary"><a href="#home"><?php echo $lang['header_inicio']?></a></li>
                 <li class="item btn-secondary"><a href="#aboutUs"><?php echo $lang['header_nosotros']?></a></li>
-                <li class="item btn-secondary"><a href="#product"><?php echo $lang['header_productos']?></a></li>
+                <li class="item btn-secondary"><a href="productos_home.php"><?php echo $lang['header_productos']?></a>
+                </li>
                 <li class="item btn-secondary"><a href="contacto.php"><?php echo $lang['header_contacto']?></a></li>
                 <a href="login.php" class="d-block"><button
                         class="item btn-primary"><?php echo $lang['header_iniciarSesion']?></button></a>
@@ -79,7 +81,7 @@
                             id="libros">libros</button></span>
                     <span class="text-filtro"><button type="button" class="filtro-btn"
                             id="accesorios">Accesorios</button></span>
-                            <span class="text-filtro"><button type="button" class="filtro-btn"
+                    <span class="text-filtro"><button type="button" class="filtro-btn"
                             id="tunicas">Tunicas</button></span>
                     <!-- <span class="text-filtro"><button type="button" class="filtro-btn"
                             id="gryffindor">Gryffindor</button></span>

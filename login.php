@@ -1,16 +1,3 @@
-<?php require_once('assets/php/lang.php'); 
-
-require_once('_autoload.php');
-
-if(!Auth::validate())
-{
-    header('Location: login.php');
-}
-
-$nombre = Auth::getNombre();
-
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
